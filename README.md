@@ -1,6 +1,6 @@
 <a href="https://github.com/KoNit-K">
   <!-- Ensure private contributions and extended stats are included -->
-  <img align="right" src="https://github-readme-stats.vercel.app/api?username=KoNit-K&show_icons=true&include_all_commits=true&count_private=true&theme=radical" />
+  <img align="right" src="https://github-readme-stats-aznx.vercel.app/api?username=KoNit-K&show_icons=true&include_all_commits=true&count_private=true&theme=radical" />
 </a>
 
 ### Hi there 👋
@@ -25,7 +25,7 @@
 
 ### Achievements 🏆
 
-[![Trophy](https://github-profile-trophy.vercel.app/?username=KoNit-K&theme=chalk&margin-w=15&margin-h=15)](https://github.com/ryo-ma/github-profile-trophy)
+[![Trophy](https://github-readme-stats-aznx.vercel.app/?username=KoNit-K&theme=chalk&margin-w=15&margin-h=15)](https://github.com/ryo-ma/github-profile-trophy)
 
 ---
 
