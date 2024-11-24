@@ -1,6 +1,6 @@
 <a href="https://github.com/KoNit-K">
   <!-- Ensure private contributions and extended stats are included -->
-  <img align="right" src="https://github-readme-stats.vercel.app/api?username=KoNit-K&show_icons=true&include_all_commits=true&count_private=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=radical" />
+  <img align="right" src="https://github-readme-stats.vercel.app/api?username=KoNit-K&show_icons=true&include_all_commits=true&count_private=true&theme=radical" />
 </a>
 
 ### Hi there 👋
@@ -29,13 +29,6 @@
 
 ---
 
-### My GitHub Stats 📊
-
-<a href="https://github.com/KoNit-K">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KoNit-K&layout=compact&count_private=true&theme=radical" alt="KoNit-K's most used languages" />
-</a>
-
----
 
 ### Fun Fact ⚡
 
