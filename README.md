@@ -1,6 +1,6 @@
 <a href="https://github.com/KoNit-K">
   <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
-  <img align="right" src="https://github-readme-stats.vercel.app/api?username=KoNit-K&hide=[%22issues%22]&show_icons=true" />
+  <img align="right" src="https://github-readme-stats.vercel.app/api?username=KoNit-K&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage" />
 </a>
 
 ### Hi there 👋
