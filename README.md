@@ -7,7 +7,7 @@
 
 🎉 Welcome to my GitHub profile!
 
-👨🏻‍💻 I'm **KoNit** - A **C++**, **Solidity**, and **Python** developer & a **Blockchain researcher**.
+👨🏻‍💻 I'm **KoNit** - A **Golang**, **Nodejs**, **Python**, **Solidity** and **C++** developer & a **Blockchain researcher**.
 
 - 🔭 I’m currently interested in:
   - **DeFi** (Decentralized Finance)
