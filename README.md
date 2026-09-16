@@ -15,11 +15,9 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ### NousResearch / Hermes Agent
 
-I contribute upstream to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), with merged work across Desktop, multi-agent behavior, and release tooling.
+I contribute upstream to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent).
 
-- [#107239](https://github.com/NousResearch/hermes-agent/pull/107239) — fixed titlebar ownership for contributed full-page extensions while preserving plugin chrome.
-- [#107186](https://github.com/NousResearch/hermes-agent/pull/107186) — fixed macOS/Tauri bootstrap-installer version stamping in the release pipeline.
-- [#106860](https://github.com/NousResearch/hermes-agent/pull/106860) — fixed cross-connection identity attribution for same-named agents in group chat.
+**[653 PRs](https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K) · [173 commits](https://github.com/NousResearch/hermes-agent/graphs/contributors?from=2026%2F8%2F15) · [3 merged PRs](https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K)**
 
 ## Selected Work
 
