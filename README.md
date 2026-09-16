@@ -3,12 +3,6 @@
 </p>
 
 <p align="center">
-  <img src="./Icon_github_main.png" alt="KoNit emblem" width="150" />
-</p>
-
-<h1 align="center">KoNit</h1>
-
-<p align="center">
   <strong>AI & Web3 Systems Engineer | Agent Security | Open Source Contributor</strong>
 </p>
 
@@ -74,6 +68,11 @@ ATTACKER  ──►  TARGET  ──►  EVALUATOR
 ```
 
 ---
+<p align="center">
+  <img src="./Icon_github_main.png" alt="KoNit emblem" width="150" />
+</p>
+
+<h1 align="center">KoNit</h1>
 
 ## 🌐 BACKGROUND
 
