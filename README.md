@@ -19,6 +19,8 @@ I contribute upstream to [NousResearch/hermes-agent](https://github.com/NousRese
 
 **[653 PRs](https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K) · [173 commits](https://github.com/NousResearch/hermes-agent/graphs/contributors?from=2026%2F8%2F15) · [3 merged PRs](https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K)**
 
+**Release contributor:** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
+
 ## Selected Work
 
 ### [RedTeamingAgent](https://github.com/KoNit-K/RedTeamingAgent)
