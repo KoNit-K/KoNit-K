@@ -32,7 +32,7 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ---
 
-## ⚡ CURRENT // FOCUS
+## ⚡ CURRENT FOCUS
 
 | | Area | Current direction |
 |---|---|---|
@@ -43,7 +43,7 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ---
 
-## 🛰️ OPEN SOURCE // SIGNAL
+## 🛰️ OPEN SOURCE
 
 ### NousResearch / Hermes Agent
 
@@ -55,11 +55,11 @@ I contribute upstream to **[NousResearch/hermes-agent](https://github.com/NousRe
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img src="https://img.shields.io/badge/3_MERGED_PRs-D946EF?style=for-the-badge&labelColor=0B1026" alt="3 merged PRs" /></a>
 </p>
 
-> **RELEASE CREDIT //** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
+> **RELEASE CREDIT:** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
 
 ---
 
-## 🤖 SELECTED // WORK
+## 🤖 SELECTED WORK
 
 ### [RedTeamingAgent](https://github.com/KoNit-K/RedTeamingAgent)
 
@@ -75,7 +75,7 @@ ATTACKER  ──►  TARGET  ──►  EVALUATOR
 
 ---
 
-## 🌐 BACKGROUND // VECTOR
+## 🌐 BACKGROUND
 
 My earlier work and research centered on blockchain and decentralized systems. I continue to work across **Web3 infrastructure, DeFi, smart contracts, and financial mechanisms**, while moving deeper into **AI-agent systems and agent security**.
 
@@ -83,7 +83,7 @@ I am particularly interested in problems where these areas overlap: **autonomous
 
 ---
 
-## 🧩 TECH // STACK
+## 🧩 TECH STACK
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-0B1026?style=for-the-badge&logo=python&logoColor=00E5FF" alt="Python" />
@@ -98,7 +98,7 @@ I am particularly interested in problems where these areas overlap: **autonomous
 
 ---
 
-## 📡 COLLAB // CHANNEL OPEN
+## 📡 COLLABORATION
 
 Open to **open-source engineering**, **AI / agent-security research**, and technically serious work at the intersection of **AI, Web3, and financial systems**.
 
