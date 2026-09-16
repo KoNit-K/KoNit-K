@@ -1,44 +1,107 @@
-# KoNit
+<p align="center">
+  <img src="./Title_github_main.png" alt="KoNit cyberpunk banner" width="100%" />
+</p>
 
-**AI & Web3 Systems Engineer | Agent Security | Open Source Contributor**
+<p align="center">
+  <img src="./Icon_github_main.png" alt="KoNit emblem" width="150" />
+</p>
 
-I build and research systems at the intersection of **AI agents**, **agent security**, **decentralized infrastructure**, and **financial protocols**. My background is in Web3 and blockchain systems; my current focus is increasingly on reliable agent infrastructure, adversarial evaluation, multi-agent systems, and AI × finance/Web3.
+<h1 align="center">KoNit</h1>
 
-## Current Focus
+<p align="center">
+  <strong>AI & Web3 Systems Engineer | Agent Security | Open Source Contributor</strong>
+</p>
 
-- **AI Agents & Agent Infrastructure** — orchestration, multi-agent coordination, tool use, runtime reliability, and local/cloud agent systems.
-- **Agent Security** — red teaming, adversarial evaluation, robustness, and safe credential / execution boundaries.
-- **Web3 Systems** — wallets, smart contracts, DeFi/AMM systems, cross-chain infrastructure, and onchain financial applications.
-- **Research** — mechanism design, game theory, and the intersection of AI with decentralized and financial systems.
+<p align="center">
+  <img src="https://img.shields.io/badge/AI_AGENTS-00E5FF?style=for-the-badge&labelColor=0B1026" alt="AI Agents" />
+  <img src="https://img.shields.io/badge/AGENT_SECURITY-D946EF?style=for-the-badge&labelColor=0B1026" alt="Agent Security" />
+  <img src="https://img.shields.io/badge/WEB3_SYSTEMS-7C3AED?style=for-the-badge&labelColor=0B1026" alt="Web3 Systems" />
+  <img src="https://img.shields.io/badge/OPEN_SOURCE-22C55E?style=for-the-badge&labelColor=0B1026" alt="Open Source" />
+</p>
 
-## Open Source
+```text
+╔══════════════════════ SYSTEM // ONLINE ══════════════════════╗
+║  ID      : KoNit                                             ║
+║  MODE    : BUILD · BREAK · SECURE · DECENTRALIZE             ║
+║  FOCUS   : AI AGENTS · SECURITY · WEB3 · AI × FINANCE        ║
+║  SIGNAL  : 653 PRs · 173 COMMITS · 3 MERGED PRs              ║
+╚════════════════════════════════════════════════════════════════╝
+```
+
+I build and research systems at the intersection of **AI agents**, **agent security**, **decentralized infrastructure**, and **financial protocols**. My background is in Web3 and blockchain systems; my current work is increasingly focused on reliable agent infrastructure, adversarial evaluation, multi-agent systems, and AI × finance / Web3.
+
+---
+
+## ⚡ CURRENT // FOCUS
+
+| | Area | Current direction |
+|---|---|---|
+| 🤖 | **AI Agents & Agent Infrastructure** | Orchestration, multi-agent coordination, tool use, runtime reliability, and local/cloud agent systems |
+| 🛡️ | **Agent Security** | Red teaming, adversarial evaluation, robustness, and safe credential / execution boundaries |
+| ⛓️ | **Web3 Systems** | Wallets, smart contracts, DeFi/AMM systems, cross-chain infrastructure, and onchain financial applications |
+| ◈ | **Research** | Mechanism design, game theory, and AI × decentralized / financial systems |
+
+---
+
+## 🛰️ OPEN SOURCE // SIGNAL
 
 ### NousResearch / Hermes Agent
 
-I contribute upstream to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent).
+I contribute upstream to **[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)**.
 
-**[653 PRs](https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K) · [173 commits](https://github.com/NousResearch/hermes-agent/graphs/contributors?from=2026%2F8%2F15) · [3 merged PRs](https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K)**
+<p align="center">
+  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img src="https://img.shields.io/badge/653_PRs-00E5FF?style=for-the-badge&labelColor=0B1026" alt="653 PRs" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/graphs/contributors?from=2026%2F8%2F15"><img src="https://img.shields.io/badge/173_COMMITS-8B5CF6?style=for-the-badge&labelColor=0B1026" alt="173 commits" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img src="https://img.shields.io/badge/3_MERGED_PRs-D946EF?style=for-the-badge&labelColor=0B1026" alt="3 merged PRs" /></a>
+</p>
 
-**Release contributor:** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
+> **RELEASE CREDIT //** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
 
-## Selected Work
+---
+
+## 🤖 SELECTED // WORK
 
 ### [RedTeamingAgent](https://github.com/KoNit-K/RedTeamingAgent)
 
-An automatic **multi-agent red-teaming framework** for evaluating AI-agent robustness. It uses attacker, target, and evaluator agents in an iterative adversarial feedback loop, with support for configurable LLM backends and distributed execution through the Naptha SDK.
+> Automatic **multi-agent red-teaming framework** for evaluating AI-agent robustness.
 
-## Background
+Attacker, target, and evaluator agents operate in an iterative adversarial feedback loop, with configurable LLM backends and distributed execution through the Naptha SDK.
+
+```text
+ATTACKER  ──►  TARGET  ──►  EVALUATOR
+    ▲                         │
+    └────── feedback loop ◄───┘
+```
+
+---
+
+## 🌐 BACKGROUND // VECTOR
 
 My earlier work and research centered on blockchain and decentralized systems. I continue to work across **Web3 infrastructure, DeFi, smart contracts, and financial mechanisms**, while moving deeper into **AI-agent systems and agent security**.
 
-I am particularly interested in problems where these areas overlap: autonomous agents interacting with financial systems, secure tool-using agents, decentralized execution, and mechanism-aware AI systems.
+I am particularly interested in problems where these areas overlap: **autonomous agents interacting with financial systems, secure tool-using agents, decentralized execution, and mechanism-aware AI systems**.
 
-## Technical Areas
+---
 
-**Languages:** Python · TypeScript / Node.js · Go · Solidity · C++
+## 🧩 TECH // STACK
 
-**Systems:** LLM Agents · Multi-Agent Systems · Agent Security · EVM / DeFi · Smart Contracts · Distributed Systems · Wallet Infrastructure
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-0B1026?style=for-the-badge&logo=python&logoColor=00E5FF" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-0B1026?style=for-the-badge&logo=typescript&logoColor=38BDF8" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Node.js-0B1026?style=for-the-badge&logo=nodedotjs&logoColor=22C55E" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Go-0B1026?style=for-the-badge&logo=go&logoColor=00E5FF" alt="Go" />
+  <img src="https://img.shields.io/badge/Solidity-0B1026?style=for-the-badge&logo=solidity&logoColor=D946EF" alt="Solidity" />
+  <img src="https://img.shields.io/badge/C++-0B1026?style=for-the-badge&logo=cplusplus&logoColor=8B5CF6" alt="C++" />
+</p>
 
-## Collaboration
+**Systems:** `LLM Agents` · `Multi-Agent Systems` · `Agent Security` · `EVM / DeFi` · `Smart Contracts` · `Distributed Systems` · `Wallet Infrastructure`
+
+---
+
+## 📡 COLLAB // CHANNEL OPEN
 
 Open to **open-source engineering**, **AI / agent-security research**, and technically serious work at the intersection of **AI, Web3, and financial systems**.
+
+<p align="center">
+  <code>BUILD // TEST // BREAK // SECURE // SHIP</code>
+</p>
