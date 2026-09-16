@@ -1,52 +1,44 @@
-<a href="https://github.com/KoNit-K">
-  <!-- Ensure private contributions and extended stats are included -->
-  <img align="right" src="https://github-readme-stats-aznx.vercel.app/api?username=KoNit-K&hide=issues&show_icons=true&include_all_commits=true&count_private=true&theme=transparent#gh-dark-mode-only" />
-</a>
+# KoNit
 
-### Hi there 👋
+**AI & Web3 Systems Engineer | Agent Security | Open Source Contributor**
 
-🎉 Welcome to my GitHub profile!
+I build and research systems at the intersection of **AI agents**, **agent security**, **decentralized infrastructure**, and **financial protocols**. My background is in Web3 and blockchain systems; my current focus is increasingly on reliable agent infrastructure, adversarial evaluation, multi-agent systems, and AI × finance/Web3.
 
-👨🏻‍💻 I'm **KoNit** - A **Golang**, **Nodejs**, **Python**, **Solidity** and **C++** developer & a **Blockchain researcher**.
+## Current Focus
 
-- 🔭 I’m currently interested in:
-  - **DeFi** (Decentralized Finance)
-  - **Blockchain Technologies**
-  - **LLM** (Large Language Models)
-  - **Game Theory** and **Mechanism Design**
-  
-- 💬 Feel free to ask me about anything.
-  
-- 👯 I’m always open to research collaborations. Due to relevant privacy regulations, I'm unable to share my repositories publicly, but I'm more than happy to discuss technical improvements and exciting ideas.
-  
-- 📫 **How to reach me**: [konit.block@protonmail.com](mailto:konit.block@protonmail.com)
+- **AI Agents & Agent Infrastructure** — orchestration, multi-agent coordination, tool use, runtime reliability, and local/cloud agent systems.
+- **Agent Security** — red teaming, adversarial evaluation, robustness, and safe credential / execution boundaries.
+- **Web3 Systems** — wallets, smart contracts, DeFi/AMM systems, cross-chain infrastructure, and onchain financial applications.
+- **Research** — mechanism design, game theory, and the intersection of AI with decentralized and financial systems.
 
----
+## Open Source
 
-### Achievements 🏆
+### NousResearch / Hermes Agent
 
-[![trophy](/?username=KoNit-K)](https://github.com/KoNit-K/github-profile-trophy)
----
+I contribute upstream to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), with merged work across Desktop, multi-agent behavior, and release tooling.
 
+- [#107239](https://github.com/NousResearch/hermes-agent/pull/107239) — fixed titlebar ownership for contributed full-page extensions while preserving plugin chrome.
+- [#107186](https://github.com/NousResearch/hermes-agent/pull/107186) — fixed macOS/Tauri bootstrap-installer version stamping in the release pipeline.
+- [#106860](https://github.com/NousResearch/hermes-agent/pull/106860) — fixed cross-connection identity attribution for same-named agents in group chat.
 
-### Fun Fact ⚡
+## Selected Work
 
-- I believe that **Code + Research = Innovation**.  
-- Let's collaborate and explore groundbreaking ideas together!
+### [RedTeamingAgent](https://github.com/KoNit-K/RedTeamingAgent)
 
----
+An automatic **multi-agent red-teaming framework** for evaluating AI-agent robustness. It uses attacker, target, and evaluator agents in an iterative adversarial feedback loop, with support for configurable LLM backends and distributed execution through the Naptha SDK.
 
-<!--
-**KoNit/KoNit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Background
 
-Here are some ideas to get you started:
+My earlier work and research centered on blockchain and decentralized systems. I continue to work across **Web3 infrastructure, DeFi, smart contracts, and financial mechanisms**, while moving deeper into **AI-agent systems and agent security**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I am particularly interested in problems where these areas overlap: autonomous agents interacting with financial systems, secure tool-using agents, decentralized execution, and mechanism-aware AI systems.
+
+## Technical Areas
+
+**Languages:** Python · TypeScript / Node.js · Go · Solidity · C++
+
+**Systems:** LLM Agents · Multi-Agent Systems · Agent Security · EVM / DeFi · Smart Contracts · Distributed Systems · Wallet Infrastructure
+
+## Collaboration
+
+Open to **open-source engineering**, **AI / agent-security research**, and technically serious work at the intersection of **AI, Web3, and financial systems**.
