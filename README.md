@@ -42,7 +42,7 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 <p align="center">
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=PRs&amp;color=00E5FF&amp;labelColor=0B1026&amp;style=for-the-badge" alt="Hermes Agent PRs" /></a>
-  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2FNousResearch%2Fhermes-agent%2Fcontributors%3Fper_page%3D100%26anon%3Dfalse&amp;query=%24%5B%3F%28%40.login%3D%3D%22KoNit-K%22%29%5D.contributions&amp;label=COMMITS&amp;color=8B5CF6&amp;labelColor=0B1026&amp;style=for-the-badge" alt="Hermes Agent commits" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img src="https://img.shields.io/badge/204_COMMITS-8B5CF6?style=for-the-badge&labelColor=0B1026" alt="204 Hermes Agent commits" /></a>
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K%2520is%253Amerged&amp;query=%24.total_count&amp;label=MERGED%20PRs&amp;color=D946EF&amp;labelColor=0B1026&amp;style=for-the-badge" alt="Hermes Agent merged PRs" /></a>
 </p>
 
