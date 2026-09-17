@@ -2,9 +2,6 @@
   <img src="./Title_github_main.png" alt="KoNit cyberpunk banner" width="100%" />
 </p>
 
-<p align="center">
-  <strong>AI & Web3 Systems Engineer | Agent Security | Open Source Contributor</strong>
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/AI_AGENTS-00E5FF?style=for-the-badge&labelColor=0B1026" alt="AI Agents" />
