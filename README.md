@@ -18,7 +18,7 @@
 ║  ID      : KoNit                                             ║
 ║  MODE    : BUILD · BREAK · SECURE · DECENTRALIZE             ║
 ║  FOCUS   : AI AGENTS · SECURITY · WEB3 · AI × FINANCE        ║
-║  SIGNAL  : 653 PRs · 173 COMMITS · 3 MERGED PRs              ║
+║  SIGNAL  : 721 PRs · 204 COMMITS · 3 MERGED PRs              ║
 ╚════════════════════════════════════════════════════════════════╝
 ```
 
@@ -41,11 +41,11 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ### NousResearch / Hermes Agent
 
-I contribute upstream to **[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)**.
+**Major contributor to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)**, contributing across agent infrastructure, Desktop, reliability, tooling, and cross-platform behavior.
 
 <p align="center">
-  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img src="https://img.shields.io/badge/653_PRs-00E5FF?style=for-the-badge&labelColor=0B1026" alt="653 PRs" /></a>
-  <a href="https://github.com/NousResearch/hermes-agent/graphs/contributors?from=2026%2F8%2F15"><img src="https://img.shields.io/badge/173_COMMITS-8B5CF6?style=for-the-badge&labelColor=0B1026" alt="173 commits" /></a>
+  <a href="https://github.com/pulls?q=is%3Apr+author%3AKoNit-K"><img src="https://img.shields.io/badge/721_PRs-00E5FF?style=for-the-badge&labelColor=0B1026" alt="721 PRs" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img src="https://img.shields.io/badge/204_COMMITS-8B5CF6?style=for-the-badge&labelColor=0B1026" alt="204 commits" /></a>
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img src="https://img.shields.io/badge/3_MERGED_PRs-D946EF?style=for-the-badge&labelColor=0B1026" alt="3 merged PRs" /></a>
 </p>
 
