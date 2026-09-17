@@ -41,9 +41,14 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 **Major contributor to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)**, contributing across agent infrastructure, Desktop, reliability, tooling, and cross-platform behavior.
 
 <p align="center">
-  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=PRs&amp;color=00E5FF&amp;labelColor=0B1026&amp;style=for-the-badge" alt="Hermes Agent PRs" /></a>
-  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img src="https://img.shields.io/badge/204_COMMITS-8B5CF6?style=for-the-badge&labelColor=0B1026" alt="204 Hermes Agent commits" /></a>
-  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K%2520is%253Amerged&amp;query=%24.total_count&amp;label=MERGED%20PRs&amp;color=D946EF&amp;labelColor=0B1026&amp;style=for-the-badge" alt="Hermes Agent merged PRs" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=TOTAL%20PRs&amp;color=00D9FF&amp;labelColor=101426&amp;style=for-the-badge" alt="Hermes Agent total PRs" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img height="36" src="https://img.shields.io/badge/COMMITS-204-8B5CF6?style=for-the-badge&labelColor=101426" alt="204 Hermes Agent commits" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K%2520is%253Amerged&amp;query=%24.total_count&amp;label=MERGED%20PRs&amp;color=E23BFF&amp;labelColor=101426&amp;style=for-the-badge" alt="Hermes Agent merged PRs" /></a>
+</p>
+
+<p align="center">
+  <img height="32" src="https://img.shields.io/badge/BEST%20MONTHLY%20RANK-%234-FFB000?style=for-the-badge&labelColor=101426" alt="Best monthly contributor rank 4" />
+  <img height="32" src="https://img.shields.io/badge/OVERALL%20CONTRIBUTOR%20RANK-%2316-22D3EE?style=for-the-badge&labelColor=101426" alt="Overall contributor rank 16" />
 </p>
 
 > **RELEASE CREDIT:** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
