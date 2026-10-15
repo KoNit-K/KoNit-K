@@ -1,0 +1,42 @@
+name: Temporary Hermes contributor audit
+on:
+  push:
+    paths:
+      - '.github/workflows/_temporary-hermes-contributor-audit.yml'
+permissions:
+  contents: read
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch GitHub contributor rankings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/NousResearch/hermes-agent/contributors?per_page=100&page=1"
+          for attempt in range(6):
+              req = urllib.request.Request(url, headers={
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                  "User-Agent": "KoNit-K-contributor-audit",
+                  "X-GitHub-Api-Version": "2022-11-28",
+              })
+              with urllib.request.urlopen(req, timeout=35) as response:
+                  if response.status == 202:
+                      time.sleep(10)
+                      continue
+                  contributors = json.load(response)
+                  break
+          else:
+              raise RuntimeError("Contributor ranking not ready")
+          assert isinstance(contributors, list) and len(contributors) >= 20
+          assert all(contributors[i]["contributions"] >= contributors[i+1]["contributions"] for i in range(19))
+          records = [
+              {"rank": i+1, "login": user.get("login"), "commits": user["contributions"]}
+              for i, user in enumerate(contributors[:25])
+          ]
+          print("CONTRIBUTOR_RANKING_JSON=" + json.dumps(records, separators=(",", ":")))
+          PY
