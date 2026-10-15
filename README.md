@@ -42,16 +42,22 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 <p align="center">
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=TOTAL%20PRs&amp;color=FFFFFF&amp;labelColor=123A8C&amp;style=for-the-badge" alt="Hermes Agent total PRs" /></a>
-  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img height="36" src="https://img.shields.io/badge/COMMITS-204-8B5CF6?style=for-the-badge&labelColor=101426" alt="204 Hermes Agent commits" /></a>
+  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fcommits%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=COMMITS&amp;color=8B5CF6&amp;labelColor=101426&amp;style=for-the-badge" alt="Live Hermes Agent commits authored by KoNit-K" /></a>
   <!-- <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K%2520is%253Amerged&amp;query=%24.total_count&amp;label=MERGED%20PRs&amp;color=E23BFF&amp;labelColor=101426&amp;style=for-the-badge" alt="Hermes Agent merged PRs" /></a> -->
 </p>
+
+<sub>Live GitHub statistics: total PRs include all states; authored commits are counted on the upstream default branch. Badge values may be cached.</sub>
 
 <p align="center">
   <img height="32" src="https://img.shields.io/badge/BEST%20MONTHLY%20RANK-%234-FFB000?style=for-the-badge&labelColor=101426" alt="Best monthly contributor rank 4" />
   <img height="32" src="https://img.shields.io/badge/OVERALL%20CONTRIBUTOR%20RANK-%2316-22C55E?style=for-the-badge&labelColor=101426" alt="Overall contributor rank 16" />
 </p>
 
-> **RELEASE CREDIT:** [Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — listed among the release's **140 contributors**.
+> **OFFICIAL RELEASE CREDITS**
+>
+> - **[Hermes Agent v0.22.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1)** — credited for [`fix(doctor): clarify Docker npm audit remediation`](https://github.com/NousResearch/hermes-agent/commit/e21caa27b75a880536ac3429f70c356ece19a330); listed with **1 commit** in the release notes.
+> - **[Hermes Agent v0.22.0 — The Threshold Release](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0)** — co-credited for **Stable release channels** (stable updates and rollback safeguards), and credited in relay and Claude rate-limit improvements. Listed among the **Top Community Contributors (8 merged PRs in this release cycle)**.
+> - **[Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11)** — listed among the release's **140 contributors**.
 
 ---
 
