@@ -48,9 +48,11 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 <sub>Live GitHub statistics: total PRs include all states; authored commits are counted on the upstream default branch. Badge values may be cached.</sub>
 
+<sub>Commit rank is the 1-based position in GitHub's official <a href="https://api.github.com/repos/NousResearch/hermes-agent/contributors?per_page=100">repository contributors list</a> (sorted by default-branch authored commits, including bots if listed), not a combined PR/review impact ranking. <a href="https://github.com/KoNit-K/KoNit-K/actions/workflows/hermes-contributor-rank.yml">GitHub Actions</a> is scheduled to refresh the ranking daily; Shields may cache the badge.</sub>
+
 <p align="center">
   <img height="32" src="https://img.shields.io/badge/BEST%20MONTHLY%20RANK-%234-FFB000?style=for-the-badge&labelColor=101426" alt="Best monthly contributor rank 4" />
-  <img height="32" src="https://img.shields.io/badge/OVERALL%20CONTRIBUTOR%20RANK-%2316-22C55E?style=for-the-badge&labelColor=101426" alt="Overall contributor rank 16" />
+  <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributor-rank.json"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-contributor-rank.json&amp;style=for-the-badge&amp;labelColor=101426" alt="Verified Hermes Agent commit contributor rank, updated via GitHub Actions" /></a>
 </p>
 
 > **OFFICIAL RELEASE CREDITS**
