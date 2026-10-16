@@ -52,9 +52,8 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ---
 
-<h1 align="left">KoNit</h1>
+<h1 align="center">KoNit</h1>
 
----
 
 ## 🌐 BACKGROUND
 
