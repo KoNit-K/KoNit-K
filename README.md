@@ -23,17 +23,6 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ---
 
-## ⚡ CURRENT FOCUS
-
-| | Area | Current direction |
-|---|---|---|
-| 🤖 | **AI Agents & Agent Infrastructure** | Orchestration, multi-agent coordination, tool use, runtime reliability, and local/cloud agent systems |
-| 🛡️ | **Agent Security** | Red teaming, adversarial evaluation, robustness, and safe credential / execution boundaries |
-| ⛓️ | **Web3 Systems** | Wallets, smart contracts, DeFi/AMM systems, cross-chain infrastructure, and onchain financial applications |
-| ◈ | **Research** | Mechanism design, game theory, and AI × decentralized / financial systems |
-
----
-
 ## 🛰️ OPEN SOURCE
 
 ### NousResearch / Hermes Agent
@@ -63,26 +52,9 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 ---
 
-## 🤖 SELECTED WORK
-
-### [RedTeamingAgent](https://github.com/KoNit-K/RedTeamingAgent)
-
-> Automatic **multi-agent red-teaming framework** for evaluating AI-agent robustness.
-
-Attacker, target, and evaluator agents operate in an iterative adversarial feedback loop, with configurable LLM backends and distributed execution through the Naptha SDK.
-
-```text
-ATTACKER  ──►  TARGET  ──►  EVALUATOR
-    ▲                         │
-    └────── feedback loop ◄───┘
-```
+<h1 align="left">KoNit</h1>
 
 ---
-<p align="center">
-  <img src="./Icon_github_main.png" alt="KoNit emblem" width="150" />
-</p>
-
-<h1 align="center">KoNit</h1>
 
 ## 🌐 BACKGROUND
 
@@ -107,6 +79,32 @@ I am particularly interested in problems where these areas overlap: **autonomous
 
 ---
 
+## ⚡ CURRENT FOCUS
+
+| | Area | Current direction |
+|---|---|---|
+| 🤖 | **AI Agents & Agent Infrastructure** | Orchestration, multi-agent coordination, tool use, runtime reliability, and local/cloud agent systems |
+| 🛡️ | **Agent Security** | Red teaming, adversarial evaluation, robustness, and safe credential / execution boundaries |
+| ⛓️ | **Web3 Systems** | Wallets, smart contracts, DeFi/AMM systems, cross-chain infrastructure, and onchain financial applications |
+| ◈ | **Research** | Mechanism design, game theory, and AI × decentralized / financial systems |
+
+---
+
+## 🤖 SELECTED WORK
+
+### [RedTeamingAgent](https://github.com/KoNit-K/RedTeamingAgent)
+
+> Automatic **multi-agent red-teaming framework** for evaluating AI-agent robustness.
+
+Attacker, target, and evaluator agents operate in an iterative adversarial feedback loop, with configurable LLM backends and distributed execution through the Naptha SDK.
+
+```text
+ATTACKER  ──►  TARGET  ──►  EVALUATOR
+    ▲                         │
+    └────── feedback loop ◄───┘
+```
+
+---
 ## 📡 COLLABORATION
 
 Open to **open-source engineering**, **AI / agent-security research**, and technically serious work at the intersection of **AI, Web3, and financial systems**.
