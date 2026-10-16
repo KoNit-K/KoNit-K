@@ -54,7 +54,7 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 
 > **OFFICIAL RELEASE CREDITS**
 >
-> - **[Hermes Agent v0.22.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1)** — credited for [`fix(doctor): clarify Docker npm audit remediation`](https://github.com/NousResearch/hermes-agent/commit/e21caa27b75a880536ac3429f70c356ece19a330); listed with **1 commit** in the release notes.
+> - **[Hermes Agent v0.22.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2) / [v0.22.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.1)** — credited in both releases for [`fix(doctor): clarify Docker npm audit remediation`](https://github.com/NousResearch/hermes-agent/commit/e21caa27b75a880536ac3429f70c356ece19a330).
 > - **[Hermes Agent v0.22.0 — The Threshold Release](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0)** — co-credited for **Stable release channels** (stable updates and rollback safeguards), and credited in relay and Claude rate-limit improvements. Listed among the **Top Community Contributors (8 merged PRs in this release cycle)**.
 > - **[Hermes Agent v0.21.2 (v2026.9.11)](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11)** — **13 authored commits** in the v0.21.1 → v0.21.2 release window, including **3 directly merged PRs**; credited among the release's **140 contributors**:
 >   - **Desktop and Bot Mode:** [#107239](https://github.com/NousResearch/hermes-agent/pull/107239) prevents fixed titlebar controls from overlapping extension-provided pages; [#106860](https://github.com/NousResearch/hermes-agent/pull/106860) scopes group-chat `(you)` labels to the correct connection; [remote liveness](https://github.com/NousResearch/hermes-agent/commit/8ab08968f48dae7d4144192919fa300b630d8768) accounts for cold-start probes.
@@ -98,9 +98,9 @@ I am particularly interested in problems where these areas overlap: **autonomous
   <img src="https://img.shields.io/badge/Python-0B1026?style=for-the-badge&logo=python&logoColor=00E5FF" alt="Python" />
   <img src="https://img.shields.io/badge/TypeScript-0B1026?style=for-the-badge&logo=typescript&logoColor=38BDF8" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Node.js-0B1026?style=for-the-badge&logo=nodedotjs&logoColor=22C55E" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Go-0B1026?style=for-the-badge&logo=go&logoColor=00E5FF" alt="Go" />
-  <img src="https://img.shields.io/badge/Solidity-0B1026?style=for-the-badge&logo=solidity&logoColor=D946EF" alt="Solidity" />
-  <img src="https://img.shields.io/badge/C++-0B1026?style=for-the-badge&logo=cplusplus&logoColor=8B5CF6" alt="C++" />
+  <img src="https://img.shields.io/badge/Go-0B1026?style=for-the-badge&logo=go&logoColor=22D3EE" alt="Go" />
+  <img src="https://img.shields.io/badge/Solidity-0B1026?style=for-the-badge&logo=solidity&logoColor=8B5CF6" alt="Solidity" />
+  <img src="https://img.shields.io/badge/C++-0B1026?style=for-the-badge&logo=cplusplus&logoColor=38BDF8" alt="C++" />
 </p>
 
 **Systems:** `LLM Agents` · `Multi-Agent Systems` · `Agent Security` · `EVM / DeFi` · `Smart Contracts` · `Distributed Systems` · `Wallet Infrastructure`
