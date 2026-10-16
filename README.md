@@ -98,9 +98,9 @@ I am particularly interested in problems where these areas overlap: **autonomous
   <img src="https://img.shields.io/badge/Python-0B1026?style=for-the-badge&logo=python&logoColor=00E5FF" alt="Python" />
   <img src="https://img.shields.io/badge/TypeScript-0B1026?style=for-the-badge&logo=typescript&logoColor=38BDF8" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Node.js-0B1026?style=for-the-badge&logo=nodedotjs&logoColor=22C55E" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Go-0B1026?style=for-the-badge&logo=go&logoColor=22D3EE" alt="Go" />
-  <img src="https://img.shields.io/badge/Solidity-0B1026?style=for-the-badge&logo=solidity&logoColor=8B5CF6" alt="Solidity" />
-  <img src="https://img.shields.io/badge/C++-0B1026?style=for-the-badge&logo=cplusplus&logoColor=38BDF8" alt="C++" />
+  <img src="https://img.shields.io/badge/Go-0B1026?style=for-the-badge&logo=go&logoColor=00E5FF" alt="Go" />
+  <img src="https://img.shields.io/badge/Solidity-0B1026?style=for-the-badge&logo=solidity&logoColor=D946EF" alt="Solidity" />
+  <img src="https://img.shields.io/badge/C++-0B1026?style=for-the-badge&logo=cplusplus&logoColor=8B5CF6" alt="C++" />
 </p>
 
 **Systems:** `LLM Agents` · `Multi-Agent Systems` · `Agent Security` · `EVM / DeFi` · `Smart Contracts` · `Distributed Systems` · `Wallet Infrastructure`
