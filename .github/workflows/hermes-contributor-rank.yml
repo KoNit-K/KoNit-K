@@ -45,7 +45,7 @@ jobs:
 
       - name: Publish verified statistics and badges together
         run: |
-          git add data/hermes-contributions.json data/hermes-contributions.md data/hermes-commits.json data/hermes-contributor-rank.json
+          git add data/hermes-contributions.json data/hermes-contributions.md data/hermes-primary-commits.json data/hermes-coauthored-commits.json data/hermes-commits.json data/hermes-contributor-rank.json
           if git diff --cached --quiet; then
             echo 'Contribution statistics unchanged'
             exit 0

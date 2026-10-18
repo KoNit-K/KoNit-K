@@ -631,9 +631,11 @@ def write_outputs(snapshot, output_dir):
     if target.get("found") is not True or type(target.get("rank")) is not int or target["rank"] < 1:
         raise ScanError("Target account could not be ranked; retaining the previous snapshot and badges.")
     badge = lambda label, message, color: {"schemaVersion": 1, "label": label, "message": message, "color": color, "cacheSeconds": 3600}
-    commit_message = str(target["total_commits"]) + ("+" if snapshot["source"]["unresolvedCommits"] else "")
+    suffix = "+" if snapshot["source"]["unresolvedCommits"] else ""
     payloads = {"hermes-contributions.json": snapshot,
-                "hermes-commits.json": badge("COMMITS", commit_message, "8B5CF6"),
+                "hermes-primary-commits.json": badge("PRIMARY", str(target["primary_author_commits"]) + suffix, "38BDF8"),
+                "hermes-coauthored-commits.json": badge("CO-AUTHORED", str(target["coauthored_commits"]) + suffix, "D946EF"),
+                "hermes-commits.json": badge("COMMITS", str(target["total_commits"]) + suffix, "8B5CF6"),
                 "hermes-contributor-rank.json": badge("COMMIT RANK", _rank_message(target), "22c55e")}
     contents = {name: json.dumps(value, ensure_ascii=False, indent=2) + "\n" for name, value in payloads.items()}
     contents["hermes-contributions.md"] = render_markdown(snapshot)
