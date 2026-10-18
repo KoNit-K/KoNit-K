@@ -33,7 +33,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: '1'
-        run: python3 scripts/update_hermes_contributions.py
+        run: python3 scripts/update_hermes_contributions.py --checkpoint-path "$RUNNER_TEMP/hermes-scan-checkpoint.json"
+      - name: Retain scan evidence for failures and unresolved objects
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hermes-scan-evidence
+          path: ${{ runner.temp }}/hermes-scan-checkpoint.json
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Publish verified statistics and badges together
         run: |

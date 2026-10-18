@@ -60,7 +60,7 @@ class FakeClient:
         return self.responses.pop(0)
 
 
-def fetch_history(client, *, progress=lambda _: None, expected_shas=None):
+def fetch_history(client, *, progress=lambda _: None, expected_shas=None, **kwargs):
     if expected_shas is None:
         expected_shas = {
             edge["node"]["oid"]
@@ -68,7 +68,7 @@ def fetch_history(client, *, progress=lambda _: None, expected_shas=None):
             for edge in response.get("repository", {}).get("object", {}).get("history", {}).get("edges", [])
         }
     return stats.fetch_history(client, progress=progress,
-        reachable_shas_provider=lambda owner, repo, sha: set(expected_shas))
+        reachable_shas_provider=lambda owner, repo, sha: set(expected_shas), **kwargs)
 
 
 class CountingTests(unittest.TestCase):
@@ -203,6 +203,100 @@ class PublishingTests(unittest.TestCase):
             client = stats.GitHubGraphQLClient("test-token", progress=lambda _: None)
             with self.assertRaises(stats.ScanError):
                 client.query("query { repository { id } }", {})
+
+
+class UncertaintyTests(unittest.TestCase):
+    def unavailable_response(self):
+        return {"repository": {"nameWithOwner": "NousResearch/hermes-agent", "object": None}}
+
+    def unresolved_history(self, **kwargs):
+        client = FakeClient(HEAD,
+            history_page([graphql_commit("head", KONIT)], 2),
+            self.unavailable_response(), self.unavailable_response())
+        return fetch_history(client, expected_shas={"head", "unavailable"}, **kwargs)
+
+    def test_unavailable_objects_remain_unknown_in_a_complete_git_partition(self):
+        history = self.unresolved_history()
+        source = history["source"]
+        self.assertTrue(source["gitReachabilityVerified"])
+        self.assertFalse(source["authorAttributionComplete"])
+        self.assertEqual(source["uniqueCommits"], 2)
+        self.assertEqual(source["resolvedCommits"], 1)
+        self.assertEqual(source["unresolvedCommits"], 1)
+        self.assertEqual(source["unresolvedCommitShas"], ["unavailable"])
+        self.assertEqual([c["oid"] for c in history["commits"]], ["head"])
+        snapshot = stats.build_snapshot(history)
+        self.assertEqual((snapshot["target"]["total_commits_min"], snapshot["target"]["total_commits_max"]), (1, 2))
+        with tempfile.TemporaryDirectory() as directory:
+            stats.write_outputs(snapshot, directory)
+            badge = json.loads((Path(directory) / "hermes-commits.json").read_text())
+            self.assertEqual(badge["message"], "1+")
+            report = (Path(directory) / "hermes-contributions.md").read_text()
+            self.assertIn("unavailable", report)
+
+    def test_expression_lookup_preserves_actual_github_authors(self):
+        client = FakeClient(HEAD,
+            history_page([graphql_commit("head", KONIT)], 2),
+            self.unavailable_response(),
+            {"repository": {"nameWithOwner": "NousResearch/hermes-agent", "object": graphql_commit("older", BOB, KONIT)}})
+        history = fetch_history(client, expected_shas={"head", "older"})
+        self.assertTrue(history["source"]["authorAttributionComplete"])
+        self.assertEqual(client.calls[-1][1]["expression"], "older")
+        self.assertEqual(stats.build_snapshot(history)["target"]["total_commits"], 2)
+
+    def test_missing_repository_is_an_error_not_an_unknown_author(self):
+        client = FakeClient(HEAD,
+            history_page([graphql_commit("head", KONIT)], 2), {"repository": None})
+        with self.assertRaises(stats.ScanError):
+            fetch_history(client, expected_shas={"head", "older"})
+
+    def test_snapshot_rejects_equal_size_but_different_git_partition(self):
+        history = self.unresolved_history()
+        history["source"]["unresolvedCommitShas"] = ["different-commit"]
+        with self.assertRaises(stats.ScanError):
+            stats.build_snapshot(history)
+
+    def test_failed_recovery_retains_the_full_scan_checkpoint(self):
+        client = FakeClient(HEAD,
+            history_page([graphql_commit("head", KONIT)], 2),
+            {"repository": {"object": {"oid": "wrong-sha"}}})
+        with tempfile.TemporaryDirectory() as directory:
+            checkpoint = Path(directory) / "scan.json"
+            with self.assertRaises(stats.ScanError):
+                fetch_history(client, expected_shas={"head", "older"}, checkpoint_path=checkpoint)
+            saved = json.loads(checkpoint.read_text())
+            self.assertFalse(saved["complete"])
+            self.assertFalse(saved["source"]["paginationComplete"])
+            self.assertEqual([c["oid"] for c in saved["commits"]], ["head"])
+            self.assertIn("older", saved["missingCommitShas"])
+
+    def test_rank_bounds_cover_all_shared_credit_assignments_and_ties(self):
+        known = [5, 3, 2]
+        rows = [{"id": str(i), "login": str(i), "total_commits": n, "rank": i + 1}
+                for i, n in enumerate(known)]
+        bounded = stats.apply_uncertainty_bounds(rows, 2)
+        # Each of two unknown commits can credit any subset of the three known
+        # accounts and one previously unseen account; credit is not a shared pie.
+        for first in range(16):
+            for second in range(16):
+                totals = known + [0]
+                for mask in (first, second):
+                    for i in range(4):
+                        totals[i] += bool(mask & (1 << i))
+                for i, row in enumerate(bounded):
+                    rank = 1 + sum(t > totals[i] for j, t in enumerate(totals) if j != i)
+                    self.assertLessEqual(row["rank_min"], rank)
+                    self.assertGreaterEqual(row["rank_max"], rank)
+        self.assertIsNotNone(bounded[2]["rank_max"])  # unseen accounts can tie 2, not exceed it
+
+    def test_wide_gaps_give_exact_rank_while_small_tail_can_be_unbounded(self):
+        rows = [{"id": str(i), "login": str(i), "total_commits": n, "rank": i + 1}
+                for i, n in enumerate([500, 382, 300, 1])]
+        bounded = stats.apply_uncertainty_bounds(rows, 3)
+        self.assertEqual((bounded[1]["rank_min"], bounded[1]["rank_max"]), (2, 2))
+        self.assertTrue(bounded[1]["rank_is_exact"])
+        self.assertEqual((bounded[1]["total_commits_min"], bounded[1]["total_commits_max"]), (382, 385))
+        self.assertIsNone(bounded[3]["rank_max"])
 
 
 if __name__ == "__main__":

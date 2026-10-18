@@ -1,9 +1,11 @@
 name: Diagnose Hermes commit objects
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/hermes-stats-diagnostic.yml']
   workflow_dispatch:
+    inputs:
+      shas:
+        description: Space-separated full commit SHAs (maximum 10)
+        required: true
+        type: string
 permissions:
   contents: read
 jobs:
@@ -12,35 +14,16 @@ jobs:
     timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
-      - name: Read oversized commit authors through parents and global node IDs
+      - name: Compare GitHub commit lookup paths
         env:
           GH_TOKEN: ${{ github.token }}
+          DIAGNOSTIC_SHAS: ${{ inputs.shas }}
           PYTHONUNBUFFERED: '1'
         run: |
           python3 - <<'PY'
-          import importlib.util, json, os, urllib.request, urllib.error
-          spec=importlib.util.spec_from_file_location("stats", "scripts/update_hermes_contributions.py")
-          stats=importlib.util.module_from_spec(spec)
-          spec.loader.exec_module(stats)
-          client=stats.GitHubGraphQLClient(os.environ["GH_TOKEN"], max_runtime_seconds=240)
-          pairs=[("722acd66f62f7617a0df3b5af919d257a35fc258","d72cbbcf5a1e360fbb26d9b7221b8d660a09fa32"),("aa0beef6848bd9cdcf1a7015cebc8dfc6170cf5b","c95743268501a5bd502596c36d0660377905966b"),("8239ec483323d7f447a7fe708d58b77ed405916f","bde6f6dce2bab4d91d9faf7bb74717a266f1a8f8")]
-          for sha, child in pairs:
-              query='query($sha:GitObjectID!) { repository(owner:"NousResearch", name:"hermes-agent") { object(oid:$sha) { __typename oid ... on Commit { parents(first:100) { totalCount pageInfo {hasNextPage endCursor} edges {cursor node {__typename id oid authors(first:100) { '+stats.AUTHOR_FIELDS+' } } } } } } } '+stats.RATE_FIELDS+' }'
-              try:
-                  print(json.dumps({"expected_parent":sha,"child":child,"parent_probe":client.query(query,{"sha":child})}),flush=True)
-              except Exception as error:
-                  print(json.dumps({"expected_parent":sha,"child":child,"parent_error":str(error)}),flush=True)
-              url='https://api.github.com/repos/NousResearch/hermes-agent/git/commits/'+sha
-              try:
-                  req=urllib.request.Request(url,headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Accept":"application/vnd.github+json","User-Agent":"hermes-count-diagnostic"})
-                  with urllib.request.urlopen(req,timeout=45) as response: record=json.load(response)
-                  node_id=record.get("node_id")
-                  print(json.dumps({"expected":sha,"git_rest_sha":record.get("sha"),"node_id":node_id,"message_length":len(record.get("message",""))}),flush=True)
-                  if node_id:
-                      query='query($id:ID!) { node(id:$id) { __typename ... on Commit { oid authors(first:100) { '+stats.AUTHOR_FIELDS+' } } } '+stats.RATE_FIELDS+' }'
-                      print(json.dumps({"expected":sha,"node_probe":client.query(query,{"id":node_id})}),flush=True)
-              except urllib.error.HTTPError as error:
-                  print(json.dumps({"expected":sha,"git_rest_http_status":error.code}),flush=True)
-              except Exception as error:
-                  print(json.dumps({"expected":sha,"git_rest_error_type":type(error).__name__}),flush=True)
+          import os, re, subprocess
+          shas = os.environ['DIAGNOSTIC_SHAS'].split()
+          if not 1 <= len(shas) <= 10 or any(not re.fullmatch(r'[0-9a-fA-F]{40}', sha) for sha in shas):
+              raise SystemExit('Provide between 1 and 10 full commit SHAs.')
+          subprocess.run(['python3', 'scripts/update_hermes_contributions.py', '--diagnose-only', *shas], check=True)
           PY
