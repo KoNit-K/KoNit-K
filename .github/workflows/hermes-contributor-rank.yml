@@ -1,4 +1,5 @@
-name: Update Hermes contributor rank
+name: Update Hermes contribution stats
+
 on:
   schedule:
     - cron: '29 4 * * *'
@@ -7,88 +8,41 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/hermes-contributor-rank.yml'
-      - 'README.md'
+      - 'scripts/update_hermes_contributions.py'
+      - 'tests/test_hermes_contributions.py'
+
 permissions:
   contents: write
+
+concurrency:
+  group: hermes-contribution-stats
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 30
     steps:
       - name: Checkout profile repository
         uses: actions/checkout@v4
-      - name: Calculate official contributor commit rank
+
+      - name: Verify counting and pagination rules
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Count authored and co-authored commits for every contributor
         env:
           GH_TOKEN: ${{ github.token }}
+          PYTHONUNBUFFERED: '1'
+        run: python3 scripts/update_hermes_contributions.py
+
+      - name: Publish verified statistics and badges together
         run: |
-          python3 - <<'PY'
-          import json
-          import os
-          import pathlib
-          import sys
-          import time
-          import urllib.request
-          
-          repo = "NousResearch/hermes-agent"
-          target = "KoNit-K"
-          token = os.environ["GH_TOKEN"]
-          previous_count = None
-          higher_count = 0
-          
-          for page in range(1, 11):
-              url = f"https://api.github.com/repos/{repo}/contributors?per_page=100&page={page}"
-              for attempt in range(6):
-                  req = urllib.request.Request(url, headers={
-                      "Accept": "application/vnd.github+json",
-                      "Authorization": f"Bearer {token}",
-                      "User-Agent": "KoNit-K-profile-ranking",
-                      "X-GitHub-Api-Version": "2022-11-28",
-                  })
-                  with urllib.request.urlopen(req, timeout=40) as response:
-                      if response.status == 202:
-                          if attempt == 5:
-                              raise RuntimeError("GitHub contributor statistics are not ready")
-                          time.sleep(10)
-                          continue
-                      batch = json.load(response)
-                      break
-          
-              if not isinstance(batch, list):
-                  raise RuntimeError("Unexpected GitHub contributors API response")
-              if not batch:
-                  break
-              for person in batch:
-                  count = person.get("contributions")
-                  if not isinstance(count, int) or count < 0:
-                      raise RuntimeError("Invalid contributor count")
-                  if previous_count is not None and count > previous_count:
-                      raise RuntimeError("GitHub contributors are not sorted descending")
-                  previous_count = count
-                  if (person.get("login") or "").casefold() == target.casefold():
-                      rank = higher_count + 1
-                      payload = {
-                          "schemaVersion": 1,
-                          "label": "COMMIT RANK",
-                          "message": f"#{rank}",
-                          "color": "22c55e",
-                      }
-                      output = pathlib.Path("data/hermes-contributor-rank.json")
-                      output.parent.mkdir(parents=True, exist_ok=True)
-                      output.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
-                      print(f"Rank verified: #{rank}; GitHub contributor commit count: {count}")
-                      sys.exit(0)
-                  higher_count += 1
-          
-          raise RuntimeError("KoNit-K not found in the first 1,000 listed contributors; no rank published")
-          PY
-      - name: Commit verified badge data
-        run: |
-          git add data/hermes-contributor-rank.json
+          git add data/hermes-contributions.json data/hermes-contributions.md data/hermes-commits.json data/hermes-contributor-rank.json
           if git diff --cached --quiet; then
-            echo 'Rank unchanged'
+            echo 'Contribution statistics unchanged'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'docs(profile): refresh verified Hermes commit rank'
+          git commit -m 'docs(profile): refresh Hermes authored and co-authored statistics'
           git push
