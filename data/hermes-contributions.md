@@ -2,7 +2,7 @@
 
 This is a **custom primary-plus-coauthor ranking**, not GitHub Insights or the REST contributors ranking.
 
-Generated: 2026-10-18T13:10:19Z
+Generated: 2026-10-18T14:00:47Z
 
 Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`9e01b44dd23978f9ff40b7837467f3a9f1582130`](https://github.com/NousResearch/hermes-agent/commit/9e01b44dd23978f9ff40b7837467f3a9f1582130).
 
@@ -29,7 +29,7 @@ References: [GitHub Commit.authors and history](https://docs.github.com/en/graph
 - Among resolved commits only: at least one linked account on 54,840; no linked account on 1,301. Unresolved commit objects are not included in either figure.
 - Among resolved commits only: any unlinked author on 1,739; unlinked author entries: 1,760.
 - Linked account-commit credits: 59,386; accounts: 4,147. A commit credited to multiple accounts contributes once to each account.
-- GraphQL requests: 569; reported query cost: 569; remaining rate-limit points: 4779.
+- GraphQL requests: 569; reported query cost: 569; remaining rate-limit points: 4265.
 
 ## Uncertainty bounds
 
