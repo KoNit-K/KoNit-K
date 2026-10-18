@@ -32,13 +32,17 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 <p align="center">
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=TOTAL%20PRs&amp;color=FFFFFF&amp;labelColor=123A8C&amp;style=for-the-badge" alt="Hermes Agent total PRs" /></a>
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520is%253Aopen%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=OPEN%20PRs&amp;color=22C55E&amp;labelColor=101426&amp;style=for-the-badge" alt="Live Hermes Agent open PRs (including drafts) authored by KoNit-K" /></a>
-  <a href="https://github.com/NousResearch/hermes-agent/commits?author=KoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fcommits%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=COMMITS&amp;color=8B5CF6&amp;labelColor=101426&amp;style=for-the-badge" alt="Live Hermes Agent commits authored by KoNit-K" /></a>
+  <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md#konit-k"><img height="36" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-commits.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Hermes Agent authored and co-authored commits by KoNit-K, deduplicated and updated daily" /></a>
   <!-- <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Amerged+author%3AKoNit-K"><img height="36" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K%2520is%253Amerged&amp;query=%24.total_count&amp;label=MERGED%20PRs&amp;color=E23BFF&amp;labelColor=101426&amp;style=for-the-badge" alt="Hermes Agent merged PRs" /></a> -->
 </p>
 
 <p align="center">
   <img height="32" src="https://img.shields.io/badge/BEST%20MONTHLY%20RANK-%234-FFB000?style=for-the-badge&labelColor=101426" alt="Best monthly contributor rank 4" />
-  <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributor-rank.json"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-contributor-rank.json&amp;style=for-the-badge&amp;labelColor=101426" alt="Verified Hermes Agent commit contributor rank, updated via GitHub Actions" /></a>
+  <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-contributor-rank.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Hermes Agent rank by authored and co-authored commits, using the same counting rule for every contributor" /></a>
+</p>
+
+<p align="center">
+  <sub><strong>COMMITS &amp; COMMIT RANK:</strong> authored + co-authored commits, counted once per commit on the default branch. Every contributor uses the same rule. A “+” marks a verified minimum when GitHub author records are unavailable; the audit shows count and rank bounds. Updated daily · <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md">Breakdown and ranking</a></sub>
 </p>
 
 > **OFFICIAL RELEASE CREDITS**
