@@ -60,6 +60,17 @@ class FakeClient:
         return self.responses.pop(0)
 
 
+def fetch_history(client, *, progress=lambda _: None, expected_shas=None):
+    if expected_shas is None:
+        expected_shas = {
+            edge["node"]["oid"]
+            for response in client.responses
+            for edge in response.get("repository", {}).get("object", {}).get("history", {}).get("edges", [])
+        }
+    return stats.fetch_history(client, progress=progress,
+        reachable_shas_provider=lambda owner, repo, sha: set(expected_shas))
+
+
 class CountingTests(unittest.TestCase):
     def test_primary_coauthor_duplicates_and_duplicate_shas_count_once(self):
         first = commit("one", KONIT, KONIT, BOB, BOB)
@@ -97,7 +108,7 @@ class PaginationTests(unittest.TestCase):
         client = FakeClient(HEAD,
             history_page([graphql_commit("head", KONIT)], 2, has_next=True),
             history_page([graphql_commit("older", BOB, KONIT)], 2, start=1))
-        history = stats.fetch_history(client, progress=lambda _: None)
+        history = fetch_history(client)
         self.assertEqual(len(history["commits"]), 2)
         self.assertEqual([call[1]["head"] for call in client.calls[1:]], ["head", "head"])
         self.assertEqual(client.calls[2][1]["after"], "c0")
@@ -107,7 +118,7 @@ class PaginationTests(unittest.TestCase):
         node = {"oid": "head", "authors": connection([{"user": None}], 2, has_next=True, prefix="a")}
         client = FakeClient(HEAD, history_page([node], 1),
             {"repository": {"object": {"oid": "head", "authors": connection([{"user": KONIT}], 2, prefix="a", start=1)}}})
-        history = stats.fetch_history(client, progress=lambda _: None)
+        history = fetch_history(client)
         row = stats.aggregate_contributors(history["commits"])[0]
         self.assertEqual((row["primary_author_commits"], row["coauthored_commits"]), (0, 1))
         self.assertEqual(client.calls[2][1]["after"], "a0")
@@ -115,22 +126,39 @@ class PaginationTests(unittest.TestCase):
     def test_incomplete_history_is_rejected(self):
         client = FakeClient(HEAD, history_page([graphql_commit("head", KONIT)], 2))
         with self.assertRaises(stats.ScanError):
-            stats.fetch_history(client, progress=lambda _: None)
+            fetch_history(client)
 
     def test_incomplete_author_connection_is_rejected(self):
         node = {"oid": "head", "authors": connection([{"user": KONIT}], 2)}
         with self.assertRaises(stats.ScanError):
-            stats.fetch_history(FakeClient(HEAD, history_page([node], 1)), progress=lambda _: None)
+            fetch_history(FakeClient(HEAD, history_page([node], 1)))
 
     def test_repeated_history_cursor_is_rejected(self):
         page = history_page([graphql_commit("head", KONIT)], 2, has_next=True)
         with self.assertRaises(stats.ScanError):
-            stats.fetch_history(FakeClient(HEAD, page, page), progress=lambda _: None)
+            fetch_history(FakeClient(HEAD, page, page))
+
+    def test_git_reachable_set_repairs_commits_omitted_by_history_pagination(self):
+        recovered = graphql_commit("older", BOB, KONIT)
+        client = FakeClient(HEAD, history_page([graphql_commit("head", KONIT)], 2),
+            {"repository": {"object": recovered}})
+        history = fetch_history(client, expected_shas={"head", "older"})
+        self.assertEqual({c["oid"] for c in history["commits"]}, {"head", "older"})
+        self.assertEqual(history["source"]["recoveredCommitShas"], ["older"])
+        self.assertTrue(history["source"]["gitReachabilityVerified"])
+        self.assertEqual(client.calls[-1][1]["head"], "older")
+        self.assertEqual(stats.build_snapshot(history)["target"]["total_commits"], 2)
+
+    def test_equal_counts_do_not_hide_a_non_reachable_commit(self):
+        client = FakeClient(HEAD, history_page([
+            graphql_commit("head", KONIT), graphql_commit("not-reachable", BOB)], 2))
+        with self.assertRaises(stats.ScanError):
+            fetch_history(client, expected_shas={"head", "missing"})
 
 
 class PublishingTests(unittest.TestCase):
     def snapshot(self):
-        history = stats.fetch_history(FakeClient(HEAD,
+        history = fetch_history(FakeClient(HEAD,
             history_page([graphql_commit("head", KONIT), graphql_commit("older", BOB, KONIT)], 2)),
             progress=lambda _: None)
         return stats.build_snapshot(history, generated_at="2026-10-18T12:00:00Z")

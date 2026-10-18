@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Publish an auditable, custom primary-plus-coauthor commit ranking.
 
-Only Python's standard library is required. GitHub account associations are read
-again on every run; previous JSON files are never used as an attribution cache.
+Python's standard library and Git are required. GitHub account associations are
+read again on every run; previous JSON files are never used as an attribution cache.
 """
 
 import argparse
@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import sys
 import tempfile
 import time
@@ -220,7 +221,41 @@ def _fetch_authors(client, owner, repo, sha, connection):
     return authors
 
 
-def fetch_history(client, owner="NousResearch", repo="hermes-agent", progress=_progress, *, target_login="KoNit-K"):
+def read_reachable_shas(owner, repo, sha, *, timeout=300):
+    """Independently enumerate the pinned commit's complete Git ancestry."""
+    if not all(re.fullmatch(r"[A-Za-z0-9_.-]+", value) for value in (owner, repo)):
+        raise ScanError("Invalid repository identity for Git verification.")
+    if not re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", sha):
+        raise ScanError("Invalid pinned SHA for Git verification.")
+    deadline = time.monotonic() + timeout
+    env = os.environ.copy()
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    for key in ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES"):
+        env.pop(key, None)
+    with tempfile.TemporaryDirectory(prefix="hermes-ancestry-") as folder:
+        def run(*arguments):
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise ScanError("Git reachability verification exceeded its runtime budget.")
+            try:
+                result = subprocess.run(["git", "--no-replace-objects", "-C", folder, *arguments],
+                                        capture_output=True, text=True, check=True, timeout=remaining, env=env)
+            except (OSError, subprocess.SubprocessError) as error:
+                raise ScanError(f"Git reachability verification failed ({type(error).__name__}); no snapshot published.") from error
+            return result.stdout.strip()
+        run("init", "--bare", "--quiet")
+        run("-c", "gc.auto=0", "fetch", "--quiet", "--filter=tree:0", "--no-tags", "--no-recurse-submodules",
+            f"https://github.com/{owner}/{repo}.git", sha)
+        if run("rev-parse", "--is-shallow-repository") != "false":
+            raise ScanError("Git verification repository is shallow; complete ancestry is required.")
+        rows = run("rev-list", "--missing=error", sha, "--").splitlines()
+    reachable = set(rows)
+    if sha not in reachable or len(rows) != len(reachable) or any(not re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", row) for row in rows):
+        raise ScanError("Git returned an invalid reachable commit set.")
+    return reachable
+
+
+def fetch_history(client, owner="NousResearch", repo="hermes-agent", progress=_progress, *, target_login="KoNit-K", reachable_shas_provider=None):
     """Pin the current default-branch head and fully paginate history + authors."""
     data = client.query(HEAD_QUERY, {"owner": owner, "repo": repo, "target": target_login})
     repository = data.get("repository") or {}
@@ -262,12 +297,33 @@ def fetch_history(client, owner="NousResearch", repo="hermes-agent", progress=_p
         if after in cursors:
             raise ScanError("Repeated history pagination cursor.")
         cursors.add(after)
-    if expected != len(commits) or sha not in commits:
-        raise ScanError(f"Incomplete history: {len(commits)} unique SHAs, history.totalCount={expected}; no snapshot published.")
+    history_unique = len(commits)
+    progress("Verifying the complete reachable SHA set with Git")
+    if reachable_shas_provider is None:
+        reachable = read_reachable_shas(owner, repo, sha, timeout=min(300, client.check_deadline()))
+    else:
+        reachable = set(reachable_shas_provider(owner, repo, sha))
+    if sha not in reachable or len(reachable) != expected:
+        raise ScanError(f"Git ancestry count {len(reachable)} does not match history.totalCount={expected}, or the pinned SHA is missing; no snapshot published.")
+    extra = set(commits) - reachable
+    if extra:
+        raise ScanError(f"GraphQL returned {len(extra)} commits outside the pinned Git ancestry: {', '.join(sorted(extra)[:10])}; no snapshot published.")
+    missing = sorted(reachable - set(commits))
+    if missing:
+        progress(f"GraphQL history omitted {len(missing)} reachable commits; fetching authors directly by SHA")
+    for oid in missing:
+        recovered = client.query(AUTHORS_QUERY, {"owner": owner, "repo": repo, "head": oid, "after": None})
+        authors = _fetch_authors(client, owner, repo, oid, _commit_object(recovered, oid).get("authors"))
+        commits[oid] = {"oid": oid, "authors": authors}
+    if set(commits) != reachable:
+        raise ScanError("Final author records do not exactly match the pinned Git ancestry; no snapshot published.")
+    progress(f"Git verified {len(reachable)} reachable commits; recovered={len(missing)}, duplicate history rows={duplicates}")
     return {"targetUser": data.get("user"), "commits": list(commits.values()), "source": {
         "repository": repository["nameWithOwner"], "repositoryUrl": repository["url"],
         "defaultBranch": branch["name"], "headSha": sha, "historyTotalCount": expected,
         "uniqueCommits": len(commits), "historyPages": pages, "duplicateCommitRows": duplicates,
+        "graphqlHistoryUniqueCommits": history_unique, "gitReachableCommits": len(reachable),
+        "gitReachabilityVerified": True, "recoveredCommitShas": missing,
         "paginationComplete": True, "queryCount": getattr(client, "query_count", None),
         "queryCost": getattr(client, "query_cost", None), "rateLimitRemaining": getattr(client, "remaining", None),
     }}
@@ -309,7 +365,8 @@ def aggregate_contributors(commits):
 def build_snapshot(history, target_login="KoNit-K", generated_at=None):
     commits = {row["oid"]: row for row in history["commits"]}
     source = dict(history["source"])
-    if source.get("paginationComplete") is not True or source.get("historyTotalCount") != len(commits):
+    if (source.get("paginationComplete") is not True or source.get("historyTotalCount") != len(commits)
+            or source.get("gitReachabilityVerified") is not True or source.get("gitReachableCommits") != len(commits)):
         raise ScanError("Cannot build a snapshot from incomplete history.")
     contributors = aggregate_contributors(history["commits"])
     linked = sum(any(a["user"] is not None for a in c["authors"]) for c in commits.values())
@@ -338,6 +395,7 @@ def build_snapshot(history, target_login="KoNit-K", generated_at=None):
             "method": {"name": "custom-primary-plus-coauthor-commit-ranking", "version": 1,
                        "api": API_URL, "authors": "GitHub Commit.authors; first entry is primary",
                        "scope": "All commits reachable from the pinned default-branch head; no history filters",
+                       "completeness": "Exact SHA-set equality with independent Git rev-list; missing history entries resolved by direct GraphQL object queries",
                        "includesMergeCommits": True, "includesEmptyCommits": True,
                        "linkedBotsIncluded": True, "unlinkedAuthorsIncluded": False,
                        "identity": "GitHub user.id", "deduplication": "One count per (commit SHA, user.id); primary takes precedence",
@@ -346,7 +404,7 @@ def build_snapshot(history, target_login="KoNit-K", generated_at=None):
                        "officialInsightsRanking": False, "attributionCache": False,
                        "unlinkedAuthorNote": "GitActor.user=null may include bot identities. No account is inferred from names or email addresses.",
                        "attributionTiming": "Commit set is pinned; GitHub account associations are observed during this run and may change later.",
-                       "documentation": ["https://docs.github.com/en/graphql/reference/commits#commit", "https://docs.github.com/en/graphql/reference/git#gitactor"]},
+                       "documentation": ["https://docs.github.com/en/graphql/reference/commits#commit", "https://docs.github.com/en/graphql/reference/git#gitactor", "https://git-scm.com/docs/git-rev-list"]},
             "source": source, "target": target, "contributors": contributors}
 
 
@@ -360,6 +418,7 @@ def render_markdown(snapshot):
              "## Method", "",
              "- Scan the complete unfiltered history of the pinned default-branch head, including merge and empty commits.",
              "- Read all pages of GitHub `Commit.authors`, including nested author pagination. The first author is primary; the others are coauthors.",
+             "- Independently enumerate the exact reachable commit set with Git. Recover omitted GraphQL history entries by direct commit-object queries; reject unexpected entries or unresolved differences.",
              "- Group linked accounts by stable GitHub user ID. Count each account once per commit SHA; primary authorship takes precedence over coauthorship.",
              "- Include every linked account, including linked bots. Exclude unlinked authors without guessing identities from names or emails; those unlinked entries may include bots.",
              "- Rank by total commits using competition ranks (1, 2, 2, 4). Display ties by case-folded login, then stable user ID.",
@@ -367,6 +426,7 @@ def render_markdown(snapshot):
              "References: [GitHub Commit.authors and history](https://docs.github.com/en/graphql/reference/commits#commit) · [GitActor.user](https://docs.github.com/en/graphql/reference/git#gitactor) · [generator source](../scripts/update_hermes_contributions.py) · [complete JSON](hermes-contributions.json).", "",
              "## Completeness and attribution", "",
              f"- History pages: {source['historyPages']}; declared history total: {source['historyTotalCount']:,}; unique commit SHAs: {source['uniqueCommits']:,}; all pagination completed and totals matched.",
+             f"- Independent Git ancestry: {source['gitReachableCommits']:,} commits; initial GraphQL history: {source['graphqlHistoryUniqueCommits']:,} unique commits; duplicate history rows: {source['duplicateCommitRows']:,}; recovered by direct SHA queries: {len(source['recoveredCommitShas']):,}. Final SHA sets match exactly.",
              f"- Commits with at least one linked account: {source['linkedCommits']:,}; commits with no linked account: {source['unlinkedCommits']:,}.",
              f"- Commits with any unlinked author: {source['commitsWithUnlinkedAuthors']:,}; unlinked author entries: {source['unlinkedAuthorAttributions']:,}.",
              f"- Linked account-commit credits: {source['linkedAccountAttributions']:,}; accounts: {len(snapshot['contributors']):,}. A commit credited to multiple accounts contributes once to each account.",
