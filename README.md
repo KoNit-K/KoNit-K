@@ -30,34 +30,17 @@ I build and research systems at the intersection of **AI agents**, **agent secur
 **Major contributor to [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)**, contributing across agent infrastructure, Desktop, reliability, tooling, and cross-platform behavior.
 
 <p align="center">
-  <sub><strong>HERMES AGENT · PR ACTIVITY</strong></sub>
-</p>
-<p align="center">
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3AKoNit-K"><img height="32" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=TOTAL%20PRs&amp;color=FFFFFF&amp;labelColor=123A8C&amp;style=for-the-badge" alt="Hermes Agent total PRs" /></a>
   <a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+is%3Aopen+author%3AKoNit-K"><img height="32" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%253ANousResearch%252Fhermes-agent%2520is%253Apr%2520is%253Aopen%2520author%253AKoNit-K&amp;query=%24.total_count&amp;label=OPEN%20PRs&amp;color=22C55E&amp;labelColor=101426&amp;style=for-the-badge" alt="Live Hermes Agent open PRs (including drafts) authored by KoNit-K" /></a>
-</p>
-
-<p align="center">
-  <sub><strong>HERMES AGENT · CODE CONTRIBUTIONS</strong></sub>
-</p>
-<p align="center">
   <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-primary-commits.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Verified primary-author commits in Hermes Agent; includes a plus sign when some author records are unavailable" /></a>
   <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-coauthored-commits.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Verified coauthor-only commits in Hermes Agent, deduplicated from primary-author commits" /></a>
   <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md#konit-k"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-commits.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Total primary and coauthored Hermes Agent commits, deduplicated by SHA; plus marks a verified lower bound" /></a>
-  <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-contributor-rank.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Custom all-time Hermes Agent commit rank using the same primary-and-coauthor attribution for all linked accounts" /></a>
-</p>
-<p align="center">
-  <sub>Default-branch commit SHAs · PRIMARY + CO-AUTHORED = COMMITS (deduplicated). “+” means a verified lower bound; audit reports missing attributions and rank uncertainty. <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md">Statistics and ranking</a>.</sub>
 </p>
 
-<p align="center">
-  <sub><strong>HISTORICAL MILESTONE</strong></sub>
-</p>
 <p align="center">
   <img height="32" src="https://img.shields.io/badge/BEST%20MONTHLY%20RANK-%234-FFB000?style=for-the-badge&amp;labelColor=101426" alt="Historical best monthly contributor rank 4; separate from the audited all-time commit rank" />
+  <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-contributor-rank.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Custom all-time Hermes Agent commit rank using the same primary-and-coauthor attribution for all linked accounts" /></a>
 </p>
-<p align="center"><sub>The monthly peak is a historical, manually maintained milestone—not a daily all-time ranking.</sub></p>
-
 
 > **OFFICIAL RELEASE CREDITS**
 >
