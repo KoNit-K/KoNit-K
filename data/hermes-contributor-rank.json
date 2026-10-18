@@ -2,5 +2,6 @@
   "schemaVersion": 1,
   "label": "COMMIT RANK",
   "message": "#16",
-  "color": "22c55e"
+  "color": "22c55e",
+  "cacheSeconds": 3600
 }
