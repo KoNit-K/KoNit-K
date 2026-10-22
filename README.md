@@ -42,14 +42,55 @@ I build and research systems at the intersection of **AI agents**, **agent secur
   <a href="https://github.com/KoNit-K/KoNit-K/blob/main/data/hermes-contributions.md"><img height="32" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FKoNit-K%2FKoNit-K%2Fmain%2Fdata%2Fhermes-contributor-rank.json&amp;style=for-the-badge&amp;labelColor=101426&amp;cacheSeconds=3600" alt="Custom all-time Hermes Agent commit rank using the same primary-and-coauthor attribution for all linked accounts" /></a>
 </p>
 
-> **RELEASE HIGHLIGHTS**
->
-> - **[v0.22.3](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3) — 44 new commits** · 37 primary + 7 co-authored. Gateway routing, Desktop session consistency, cron execution, and opt-in topic transfer for Telegram direct messages.
-> - **[v0.21.6](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6) — 30 new commits** · 18 primary + 12 co-authored; **4 directly merged PRs**. Windows crash recovery, Desktop session persistence, provider configuration, and pricing.
-> - **[v0.21.5](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24) — 27 new commits** · 20 primary + 7 co-authored; **1 directly merged PR**. Profile credential isolation, plugin policy safety, context compaction, and Desktop usability.
-> - **[v0.21.4](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.21) — 249 new commits** · **186 primary + 63 co-authored**. Desktop and gateway reliability, context compression, cron scheduling, and update recovery.
-> - **[v0.21.3](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14) — 23 new commits** · 19 primary + 4 co-authored. Desktop profile isolation, remote-session lifecycle, credential redaction, and gateway migration safety.
-> - **[v0.21.2](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11) — 15 new commits** · 13 primary + 2 co-authored; **3 directly merged PRs**. Desktop and Bot Mode, installer versioning, remote startup reliability, and local-runtime context handling.
+#### Release highlights
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.21">Hermes Agent v0.21.4</a></h4>
+      <p>Improved <strong>Desktop and gateway reliability</strong>, helped scheduled runs finish and deliver results, and strengthened context compression and recovery from update failures.</p>
+      <p><strong>249 commits</strong><br>
+      186 primary · 63 co-authored</p>
+    </td>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.3">Hermes Agent v0.22.3</a></h4>
+      <p>Improved gateway routing and <strong>Desktop session consistency</strong>, made scheduled runs easier to track, and added opt-in topic transfer for Telegram direct messages.</p>
+      <p><strong>44 commits</strong><br>
+      37 primary · 7 co-authored</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6">Hermes Agent v0.21.6</a></h4>
+      <p>Helped Desktop <strong>recover from Windows crashes</strong> and keep project folders attached to sessions, while correcting provider settings and pricing lookups.</p>
+      <p><strong>30 commits</strong><br>
+      18 primary · 12 co-authored<br>
+      <strong>4 directly merged PRs</strong></p>
+    </td>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24">Hermes Agent v0.21.5</a></h4>
+      <p>Strengthened <strong>plugin safeguards and credential checks</strong> between profiles, kept refusal responses from replacing conversation context, and improved Desktop HTML previews and dictation.</p>
+      <p><strong>27 commits</strong><br>
+      20 primary · 7 co-authored<br>
+      <strong>1 directly merged PR</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.14">Hermes Agent v0.21.3</a></h4>
+      <p>Kept Desktop tabs tied to the right profiles, <strong>stabilized remote sessions</strong>, redacted configuration secrets, and tightened the safeguards around gateway migrations.</p>
+      <p><strong>23 commits</strong><br>
+      19 primary · 4 co-authored</p>
+    </td>
+    <td width="50%" valign="top">
+      <h4><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11">Hermes Agent v0.21.2</a></h4>
+      <p>Made <strong>Desktop conversations easier to follow</strong>, fixed Bot Mode identity labels, and improved installer versioning, remote startup, and local model context handling.</p>
+      <p><strong>15 commits</strong><br>
+      13 primary · 2 co-authored<br>
+      <strong>3 directly merged PRs</strong></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
