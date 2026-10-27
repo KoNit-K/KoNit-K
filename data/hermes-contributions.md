@@ -2,9 +2,9 @@
 
 This is a **custom primary-plus-coauthor ranking**, not GitHub Insights or the REST contributors ranking.
 
-Generated: 2026-10-26T10:33:04Z
+Generated: 2026-10-27T10:07:17Z
 
-Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`9b904dcc22c23fe8b82834339bbdd96495072e59`](https://github.com/NousResearch/hermes-agent/commit/9b904dcc22c23fe8b82834339bbdd96495072e59).
+Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`69f73ec5f11f5a945cc864f29c4e2ad2307eaec3`](https://github.com/NousResearch/hermes-agent/commit/69f73ec5f11f5a945cc864f29c4e2ad2307eaec3).
 
 **Author attribution is incomplete for 3 commits.** Verified totals are lower bounds; unknown contributions have not been assigned to anyone or treated as zero. Complete-count and rank bounds are shown below.
 
@@ -23,13 +23,13 @@ References: [GitHub Commit.authors and history](https://docs.github.com/en/graph
 
 ## Completeness and attribution
 
-- Completed history pages: 595; declared history total: 59,456; independent Git ancestry: 59,456 commits.
-- Resolved author records: 59,453; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 59,456 reachable commits.
-- Initial GraphQL history: 59,453 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
-- Among resolved commits only: at least one linked account on 58,091; no linked account on 1,362. Unresolved commit objects are not included in either figure.
-- Among resolved commits only: any unlinked author on 1,819; unlinked author entries: 1,842.
-- Linked account-commit credits: 62,770; accounts: 4,306. A commit credited to multiple accounts contributes once to each account.
-- GraphQL requests: 602; reported query cost: 602; remaining rate-limit points: 4661.
+- Completed history pages: 597; declared history total: 59,600; independent Git ancestry: 59,600 commits.
+- Resolved author records: 59,597; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 59,600 reachable commits.
+- Initial GraphQL history: 59,597 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
+- Among resolved commits only: at least one linked account on 58,234; no linked account on 1,363. Unresolved commit objects are not included in either figure.
+- Among resolved commits only: any unlinked author on 1,820; unlinked author entries: 1,843.
+- Linked account-commit credits: 62,917; accounts: 4,310. A commit credited to multiple accounts contributes once to each account.
+- GraphQL requests: 604; reported query cost: 604; remaining rate-limit points: 4557.
 
 ## Uncertainty bounds
 
@@ -53,36 +53,36 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 
 | Known-credit position | Complete rank | Account | Verified primary | Verified coauthor-only | Complete total |
 | ---: | ---: | --- | ---: | ---: | ---: |
-| 1 | #1 | [teknium1](https://github.com/teknium1) | 24,658 | 78 | 24,736–24,739 |
-| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,247 | 54 | 5,301–5,304 |
+| 1 | #1 | [teknium1](https://github.com/teknium1) | 24,681 | 78 | 24,759–24,762 |
+| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,253 | 54 | 5,307–5,310 |
 | 3 | #3 | [OutThisLife](https://github.com/OutThisLife) | 4,578 | 31 | 4,609–4,612 |
 | 4 | #4 | [ethernet8023](https://github.com/ethernet8023) | 2,356 | 4 | 2,360–2,363 |
-| 5 | #5 | [claude](https://github.com/claude) | 6 | 963 | 969–972 |
+| 5 | #5 | [claude](https://github.com/claude) | 6 | 964 | 970–973 |
 | 6 | #6 | [alt-glitch](https://github.com/alt-glitch) | 894 | 7 | 901–904 |
-| 7 | #7 | [unsupportedpastels](https://github.com/unsupportedpastels) | 730 | 12 | 742–745 |
-| 8 | #8 | [liuhao1024](https://github.com/liuhao1024) | 579 | 115 | 694–697 |
+| 7 | #7 | [unsupportedpastels](https://github.com/unsupportedpastels) | 789 | 12 | 801–804 |
+| 8 | #8 | [liuhao1024](https://github.com/liuhao1024) | 579 | 116 | 695–698 |
 | 9 | #9 | [benbarclay](https://github.com/benbarclay) | 553 | 18 | 571–574 |
-| 10 | #10 | [jquesnelle](https://github.com/jquesnelle) | 504 | 7 | 511–514 |
-| 11 | #11 | [austinpickett](https://github.com/austinpickett) | 460 | 12 | 472–475 |
+| 10 | #10 | [jquesnelle](https://github.com/jquesnelle) | 506 | 7 | 513–516 |
+| 11 | #11 | [austinpickett](https://github.com/austinpickett) | 461 | 12 | 473–476 |
 | 12 | #12 | [github-actions[bot]](https://github.com/github-actions[bot]) | 10 | 438 | 448–451 |
 | 13 | #13–14 | [fangliquanflq](https://github.com/fangliquanflq) | 363 | 55 | 418–421 |
 | 14 | #13–14 | [JoaoMarcos44](https://github.com/JoaoMarcos44) | 327 | 89 | 416–419 |
 | 15 | #15 | [helix4u](https://github.com/helix4u) | 385 | 20 | 405–408 |
 | 16 | #15–16 | [hermes-seaeye[bot]](https://github.com/hermes-seaeye[bot]) | 401 | 1 | 402–405 |
 | 17 | #17 | [KoNit-K](https://github.com/KoNit-K) | 295 | 96 | 391–394 |
-| 18 | #18 | [xxxigm](https://github.com/xxxigm) | 300 | 36 | 336–339 |
-| 19 | #19 | [c2h5oh](https://github.com/c2h5oh) | 320 | 0 | 320–323 |
-| 20 | #20 | [jonpol01](https://github.com/jonpol01) | 258 | 30 | 288–291 |
+| 18 | #18 | [xxxigm](https://github.com/xxxigm) | 300 | 37 | 337–340 |
+| 19 | #19 | [c2h5oh](https://github.com/c2h5oh) | 321 | 0 | 321–324 |
+| 20 | #20 | [jonpol01](https://github.com/jonpol01) | 261 | 30 | 291–294 |
 | 21 | #21 | [yoniebans](https://github.com/yoniebans) | 276 | 2 | 278–281 |
 | 22 | #22 | [erosika](https://github.com/erosika) | 256 | 6 | 262–265 |
 | 23 | #23 | [0xbyt4](https://github.com/0xbyt4) | 201 | 12 | 213–216 |
 | 24 | #24 | [HexLab98](https://github.com/HexLab98) | 193 | 13 | 206–209 |
-| 25 | #25 | [cursoragent](https://github.com/cursoragent) | 15 | 165 | 180–183 |
-| 26 | #26 | [dokterdok](https://github.com/dokterdok) | 156 | 19 | 175–178 |
-| 27 | #27 | [afourniernv](https://github.com/afourniernv) | 171 | 0 | 171–174 |
-| 28 | #28 | [kokhlo](https://github.com/kokhlo) | 127 | 39 | 166–169 |
-| 29 | #28–30 | [briandevans](https://github.com/briandevans) | 153 | 10 | 163–166 |
-| 30 | #29–30 | [Adolanium](https://github.com/Adolanium) | 155 | 6 | 161–164 |
+| 25 | #25 | [dokterdok](https://github.com/dokterdok) | 164 | 19 | 183–186 |
+| 26 | #25–27 | [Adolanium](https://github.com/Adolanium) | 174 | 6 | 180–183 |
+| 27 | #25–27 | [cursoragent](https://github.com/cursoragent) | 15 | 165 | 180–183 |
+| 28 | #28 | [afourniernv](https://github.com/afourniernv) | 171 | 0 | 171–174 |
+| 29 | #29 | [kokhlo](https://github.com/kokhlo) | 127 | 39 | 166–169 |
+| 30 | #29–30 | [briandevans](https://github.com/briandevans) | 153 | 10 | 163–166 |
 | 31 | #31–32 | [Finn763](https://github.com/Finn763) | 122 | 35 | 157–160 |
 | 32 | #31–32 | [victor-kyriazakos](https://github.com/victor-kyriazakos) | 149 | 7 | 156–159 |
 | 33 | #33 | [dskwe](https://github.com/dskwe) | 118 | 25 | 143–146 |
@@ -90,10 +90,10 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 | 35 | #34–35 | [chelsealong](https://github.com/chelsealong) | 120 | 15 | 135–138 |
 | 36 | #36 | [DavidMetcalfe](https://github.com/DavidMetcalfe) | 113 | 17 | 130–133 |
 | 37 | #37 | [webtecnica](https://github.com/webtecnica) | 85 | 38 | 123–126 |
-| 38 | #38 | [Tranquil-Flow](https://github.com/Tranquil-Flow) | 88 | 20 | 108–111 |
-| 39 | #39 | [itpartypattaya](https://github.com/itpartypattaya) | 102 | 0 | 102–105 |
-| 40 | #40 | [SHL0MS](https://github.com/SHL0MS) | 87 | 11 | 98–101 |
-| 41 | #40–41 | [686f6c61](https://github.com/686f6c61) | 75 | 20 | 95–98 |
+| 38 | #38–39 | [Tranquil-Flow](https://github.com/Tranquil-Flow) | 88 | 20 | 108–111 |
+| 39 | #38–39 | [SHL0MS](https://github.com/SHL0MS) | 95 | 11 | 106–109 |
+| 40 | #40 | [itpartypattaya](https://github.com/itpartypattaya) | 102 | 0 | 102–105 |
+| 41 | #41 | [686f6c61](https://github.com/686f6c61) | 76 | 20 | 96–99 |
 | 42 | #42 | [Wenfengcheng](https://github.com/Wenfengcheng) | 81 | 10 | 91–94 |
 | 43 | #42–43 | [ygd58](https://github.com/ygd58) | 55 | 33 | 88–91 |
 | 44 | #44 | [shannonsands](https://github.com/shannonsands) | 81 | 0 | 81–84 |
@@ -144,12 +144,12 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 | 89 | #81–96 | [Kyzcreig](https://github.com/Kyzcreig) | 22 | 13 | 35–38 |
 | 90 | #81–96 | [MohamadKanso](https://github.com/MohamadKanso) | 21 | 14 | 35–38 |
 | 91 | #81–96 | [nousbot-eng](https://github.com/nousbot-eng) | 35 | 0 | 35–38 |
-| 92 | #84–97 | [anpicasso](https://github.com/anpicasso) | 26 | 8 | 34–37 |
-| 93 | #84–97 | [Dusk1e](https://github.com/Dusk1e) | 30 | 4 | 34–37 |
-| 94 | #84–97 | [Enough1122](https://github.com/Enough1122) | 26 | 8 | 34–37 |
+| 92 | #84–98 | [anpicasso](https://github.com/anpicasso) | 26 | 8 | 34–37 |
+| 93 | #84–98 | [Dusk1e](https://github.com/Dusk1e) | 30 | 4 | 34–37 |
+| 94 | #84–98 | [Enough1122](https://github.com/Enough1122) | 26 | 8 | 34–37 |
 | 95 | #87–100 | [izumi0uu](https://github.com/izumi0uu) | 24 | 9 | 33–36 |
 | 96 | #87–100 | [zapabob](https://github.com/zapabob) | 21 | 12 | 33–36 |
-| 97 | #89–106 | [HenkDz](https://github.com/HenkDz) | 29 | 3 | 32–35 |
-| 98 | #92–109 | [BearHuddleston](https://github.com/BearHuddleston) | 30 | 1 | 31–34 |
+| 97 | #89–106 | [BearHuddleston](https://github.com/BearHuddleston) | 31 | 1 | 32–35 |
+| 98 | #89–106 | [HenkDz](https://github.com/HenkDz) | 29 | 3 | 32–35 |
 | 99 | #92–109 | [notwitcheer](https://github.com/notwitcheer) | 30 | 1 | 31–34 |
 | 100 | #92–109 | [pefontana](https://github.com/pefontana) | 30 | 1 | 31–34 |
