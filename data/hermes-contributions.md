@@ -2,9 +2,9 @@
 
 This is a **custom primary-plus-coauthor ranking**, not GitHub Insights or the REST contributors ranking.
 
-Generated: 2026-10-29T11:11:57Z
+Generated: 2026-10-30T11:07:24Z
 
-Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`ef75bc708867e3884cb40a91363be6dc6fddc034`](https://github.com/NousResearch/hermes-agent/commit/ef75bc708867e3884cb40a91363be6dc6fddc034).
+Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`e864515d2651ea0b3420482d5e00ca0eb3586b24`](https://github.com/NousResearch/hermes-agent/commit/e864515d2651ea0b3420482d5e00ca0eb3586b24).
 
 **Author attribution is incomplete for 3 commits.** Verified totals are lower bounds; unknown contributions have not been assigned to anyone or treated as zero. Complete-count and rank bounds are shown below.
 
@@ -23,13 +23,13 @@ References: [GitHub Commit.authors and history](https://docs.github.com/en/graph
 
 ## Completeness and attribution
 
-- Completed history pages: 607; declared history total: 60,629; independent Git ancestry: 60,629 commits.
-- Resolved author records: 60,626; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 60,629 reachable commits.
-- Initial GraphQL history: 60,626 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
-- Among resolved commits only: at least one linked account on 59,246; no linked account on 1,380. Unresolved commit objects are not included in either figure.
+- Completed history pages: 608; declared history total: 60,761; independent Git ancestry: 60,761 commits.
+- Resolved author records: 60,758; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 60,761 reachable commits.
+- Initial GraphQL history: 60,758 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
+- Among resolved commits only: at least one linked account on 59,378; no linked account on 1,380. Unresolved commit objects are not included in either figure.
 - Among resolved commits only: any unlinked author on 1,843; unlinked author entries: 1,866.
-- Linked account-commit credits: 63,961; accounts: 4,359. A commit credited to multiple accounts contributes once to each account.
-- GraphQL requests: 614; reported query cost: 614; remaining rate-limit points: 4523.
+- Linked account-commit credits: 64,094; accounts: 4,361. A commit credited to multiple accounts contributes once to each account.
+- GraphQL requests: 615; reported query cost: 615; remaining rate-limit points: 4846.
 
 ## Uncertainty bounds
 
@@ -53,8 +53,8 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 
 | Known-credit position | Complete rank | Account | Verified primary | Verified coauthor-only | Complete total |
 | ---: | ---: | --- | ---: | ---: | ---: |
-| 1 | #1 | [teknium1](https://github.com/teknium1) | 25,300 | 78 | 25,378–25,381 |
-| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,292 | 55 | 5,347–5,350 |
+| 1 | #1 | [teknium1](https://github.com/teknium1) | 25,302 | 78 | 25,380–25,383 |
+| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,409 | 55 | 5,464–5,467 |
 | 3 | #3 | [OutThisLife](https://github.com/OutThisLife) | 4,578 | 31 | 4,609–4,612 |
 | 4 | #4 | [ethernet8023](https://github.com/ethernet8023) | 2,367 | 4 | 2,371–2,374 |
 | 5 | #5 | [claude](https://github.com/claude) | 6 | 979 | 985–988 |
@@ -62,15 +62,15 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 | 7 | #7 | [unsupportedpastels](https://github.com/unsupportedpastels) | 812 | 14 | 826–829 |
 | 8 | #8 | [liuhao1024](https://github.com/liuhao1024) | 584 | 117 | 701–704 |
 | 9 | #9 | [benbarclay](https://github.com/benbarclay) | 588 | 18 | 606–609 |
-| 10 | #10 | [jquesnelle](https://github.com/jquesnelle) | 506 | 7 | 513–516 |
-| 11 | #11 | [austinpickett](https://github.com/austinpickett) | 476 | 12 | 488–491 |
+| 10 | #10 | [jquesnelle](https://github.com/jquesnelle) | 510 | 7 | 517–520 |
+| 11 | #11 | [austinpickett](https://github.com/austinpickett) | 477 | 12 | 489–492 |
 | 12 | #12 | [github-actions[bot]](https://github.com/github-actions[bot]) | 10 | 438 | 448–451 |
 | 13 | #13 | [fangliquanflq](https://github.com/fangliquanflq) | 364 | 55 | 419–422 |
 | 14 | #13–14 | [JoaoMarcos44](https://github.com/JoaoMarcos44) | 327 | 89 | 416–419 |
-| 15 | #15 | [helix4u](https://github.com/helix4u) | 391 | 20 | 411–414 |
+| 15 | #14–15 | [helix4u](https://github.com/helix4u) | 393 | 20 | 413–416 |
 | 16 | #16 | [hermes-seaeye[bot]](https://github.com/hermes-seaeye[bot]) | 401 | 1 | 402–405 |
 | 17 | #17 | [KoNit-K](https://github.com/KoNit-K) | 297 | 96 | 393–396 |
-| 18 | #18 | [xxxigm](https://github.com/xxxigm) | 304 | 38 | 342–345 |
+| 18 | #18 | [xxxigm](https://github.com/xxxigm) | 305 | 38 | 343–346 |
 | 19 | #19 | [c2h5oh](https://github.com/c2h5oh) | 321 | 0 | 321–324 |
 | 20 | #20 | [jonpol01](https://github.com/jonpol01) | 262 | 31 | 293–296 |
 | 21 | #21 | [yoniebans](https://github.com/yoniebans) | 276 | 4 | 280–283 |
