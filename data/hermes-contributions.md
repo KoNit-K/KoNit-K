@@ -2,9 +2,9 @@
 
 This is a **custom primary-plus-coauthor ranking**, not GitHub Insights or the REST contributors ranking.
 
-Generated: 2026-10-31T10:40:32Z
+Generated: 2026-11-01T11:33:33Z
 
-Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`c419cf7c864ac0ee511dbd9f7091a8bba0b567ee`](https://github.com/NousResearch/hermes-agent/commit/c419cf7c864ac0ee511dbd9f7091a8bba0b567ee).
+Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`a4994d4ead8f9c915b485cec5689909b349a49df`](https://github.com/NousResearch/hermes-agent/commit/a4994d4ead8f9c915b485cec5689909b349a49df).
 
 **Author attribution is incomplete for 3 commits.** Verified totals are lower bounds; unknown contributions have not been assigned to anyone or treated as zero. Complete-count and rank bounds are shown below.
 
@@ -23,13 +23,13 @@ References: [GitHub Commit.authors and history](https://docs.github.com/en/graph
 
 ## Completeness and attribution
 
-- Completed history pages: 609; declared history total: 60,878; independent Git ancestry: 60,878 commits.
-- Resolved author records: 60,875; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 60,878 reachable commits.
-- Initial GraphQL history: 60,875 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
-- Among resolved commits only: at least one linked account on 59,497; no linked account on 1,378. Unresolved commit objects are not included in either figure.
+- Completed history pages: 610; declared history total: 60,946; independent Git ancestry: 60,946 commits.
+- Resolved author records: 60,943; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 60,946 reachable commits.
+- Initial GraphQL history: 60,943 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
+- Among resolved commits only: at least one linked account on 59,565; no linked account on 1,378. Unresolved commit objects are not included in either figure.
 - Among resolved commits only: any unlinked author on 1,841; unlinked author entries: 1,864.
-- Linked account-commit credits: 64,216; accounts: 4,366. A commit credited to multiple accounts contributes once to each account.
-- GraphQL requests: 616; reported query cost: 616; remaining rate-limit points: 4534.
+- Linked account-commit credits: 64,286; accounts: 4,369. A commit credited to multiple accounts contributes once to each account.
+- GraphQL requests: 617; reported query cost: 617; remaining rate-limit points: 4530.
 
 ## Uncertainty bounds
 
@@ -53,8 +53,8 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 
 | Known-credit position | Complete rank | Account | Verified primary | Verified coauthor-only | Complete total |
 | ---: | ---: | --- | ---: | ---: | ---: |
-| 1 | #1 | [teknium1](https://github.com/teknium1) | 25,352 | 78 | 25,430–25,433 |
-| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,447 | 55 | 5,502–5,505 |
+| 1 | #1 | [teknium1](https://github.com/teknium1) | 25,403 | 78 | 25,481–25,484 |
+| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,460 | 55 | 5,515–5,518 |
 | 3 | #3 | [OutThisLife](https://github.com/OutThisLife) | 4,578 | 31 | 4,609–4,612 |
 | 4 | #4 | [ethernet8023](https://github.com/ethernet8023) | 2,367 | 4 | 2,371–2,374 |
 | 5 | #5 | [claude](https://github.com/claude) | 6 | 979 | 985–988 |
@@ -96,7 +96,7 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 | 41 | #41 | [686f6c61](https://github.com/686f6c61) | 79 | 20 | 99–102 |
 | 42 | #42 | [Wenfengcheng](https://github.com/Wenfengcheng) | 81 | 10 | 91–94 |
 | 43 | #42–43 | [ygd58](https://github.com/ygd58) | 55 | 33 | 88–91 |
-| 44 | #44 | [shannonsands](https://github.com/shannonsands) | 81 | 0 | 81–84 |
+| 44 | #44 | [shannonsands](https://github.com/shannonsands) | 82 | 0 | 82–85 |
 | 45 | #45 | [PRATHAMESH75](https://github.com/PRATHAMESH75) | 69 | 8 | 77–80 |
 | 46 | #45–48 | [Bartok9](https://github.com/Bartok9) | 61 | 13 | 74–77 |
 | 47 | #46–49 | [konsisumer](https://github.com/konsisumer) | 63 | 10 | 73–76 |
