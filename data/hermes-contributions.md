@@ -2,9 +2,9 @@
 
 This is a **custom primary-plus-coauthor ranking**, not GitHub Insights or the REST contributors ranking.
 
-Generated: 2026-11-22T12:57:08Z
+Generated: 2026-11-23T15:20:51Z
 
-Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`0f602c5f6f18615632535251d62a2db74ce93b69`](https://github.com/NousResearch/hermes-agent/commit/0f602c5f6f18615632535251d62a2db74ce93b69).
+Source: [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), default branch `main`, pinned commit [`45665879083359efe1fc5134ddd2f5dffd804139`](https://github.com/NousResearch/hermes-agent/commit/45665879083359efe1fc5134ddd2f5dffd804139).
 
 **Author attribution is incomplete for 3 commits.** Verified totals are lower bounds; unknown contributions have not been assigned to anyone or treated as zero. Complete-count and rank bounds are shown below.
 
@@ -23,13 +23,13 @@ References: [GitHub Commit.authors and history](https://docs.github.com/en/graph
 
 ## Completeness and attribution
 
-- Completed history pages: 761; declared history total: 76,041; independent Git ancestry: 76,041 commits.
-- Resolved author records: 76,038; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 76,041 reachable commits.
-- Initial GraphQL history: 76,038 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
-- Among resolved commits only: at least one linked account on 74,501; no linked account on 1,537. Unresolved commit objects are not included in either figure.
-- Among resolved commits only: any unlinked author on 2,034; unlinked author entries: 2,058.
-- Linked account-commit credits: 80,614; accounts: 5,684. A commit credited to multiple accounts contributes once to each account.
-- GraphQL requests: 768; reported query cost: 768; remaining rate-limit points: 4423.
+- Completed history pages: 761; declared history total: 76,097; independent Git ancestry: 76,097 commits.
+- Resolved author records: 76,094; unresolved commit objects: 3. Their disjoint SHA sets exactly cover all 76,097 reachable commits.
+- Initial GraphQL history: 76,094 unique commits; duplicate history rows: 3; resolved by direct SHA queries: 0.
+- Among resolved commits only: at least one linked account on 74,556; no linked account on 1,538. Unresolved commit objects are not included in either figure.
+- Among resolved commits only: any unlinked author on 2,035; unlinked author entries: 2,059.
+- Linked account-commit credits: 80,676; accounts: 5,685. A commit credited to multiple accounts contributes once to each account.
+- GraphQL requests: 768; reported query cost: 768; remaining rate-limit points: 4416.
 
 ## Uncertainty bounds
 
@@ -53,15 +53,15 @@ Rows are ordered by verified totals and include positions 5–20 where present. 
 
 | Known-credit position | Complete rank | Account | Verified primary | Verified coauthor-only | Complete total |
 | ---: | ---: | --- | ---: | ---: | ---: |
-| 1 | #1 | [teknium1](https://github.com/teknium1) | 29,895 | 95 | 29,990–29,993 |
-| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,885 | 64 | 5,949–5,952 |
+| 1 | #1 | [teknium1](https://github.com/teknium1) | 29,898 | 95 | 29,993–29,996 |
+| 2 | #2 | [kshitijk4poor](https://github.com/kshitijk4poor) | 5,888 | 64 | 5,952–5,955 |
 | 3 | #3 | [OutThisLife](https://github.com/OutThisLife) | 4,582 | 31 | 4,613–4,616 |
-| 4 | #4 | [ethernet8023](https://github.com/ethernet8023) | 2,381 | 4 | 2,385–2,388 |
+| 4 | #4 | [ethernet8023](https://github.com/ethernet8023) | 2,385 | 4 | 2,389–2,392 |
 | 5 | #5 | [c2h5oh](https://github.com/c2h5oh) | 1,912 | 0 | 1,912–1,915 |
-| 6 | #6 | [claude](https://github.com/claude) | 31 | 1,536 | 1,567–1,570 |
+| 6 | #6 | [claude](https://github.com/claude) | 31 | 1,537 | 1,568–1,571 |
 | 7 | #7 | [unsupportedpastels](https://github.com/unsupportedpastels) | 1,361 | 45 | 1,406–1,409 |
 | 8 | #8 | [alt-glitch](https://github.com/alt-glitch) | 1,313 | 9 | 1,322–1,325 |
-| 9 | #9 | [BearHuddleston](https://github.com/BearHuddleston) | 391 | 541 | 932–935 |
+| 9 | #9 | [BearHuddleston](https://github.com/BearHuddleston) | 421 | 547 | 968–971 |
 | 10 | #10 | [liuhao1024](https://github.com/liuhao1024) | 661 | 144 | 805–808 |
 | 11 | #11 | [benbarclay](https://github.com/benbarclay) | 666 | 18 | 684–687 |
 | 12 | #12 | [yoniebans](https://github.com/yoniebans) | 658 | 5 | 663–666 |
